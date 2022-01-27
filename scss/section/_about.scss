@@ -1,0 +1,46 @@
+.about {
+   background: #f5f6ff;
+
+   &__description {
+      font-size: 12px;
+      line-height: 1.8;
+      height: 120px;
+      overflow: hidden;
+      @media screen and (min-width: 1024px) {
+         padding: 0 10px;
+         font-size: 16px;
+      }
+   }
+
+   &__description.open {
+      height: 100%;
+      overflow: unset;
+   }
+
+   &__button {
+      display: flex;
+      align-items: center;
+      padding-top: 26px;
+      padding-bottom: 40px;
+      background: #f5f6ff;
+      @media screen and (min-width: 1024px) {
+         padding-left: 20px;
+         padding-right: 20px;
+      }
+      @media screen and (min-width: 1900px) {
+         padding-left: 172px;
+         padding-right: 172px;
+      }
+   }
+
+   &__button--icon {
+      width: 32px;
+      height: 32px;
+      margin-right: 10px;
+   }
+
+   &__button--text {
+      font-weight: 300;
+      border-bottom: 1px dashed #424242;
+   }
+}

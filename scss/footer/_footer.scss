@@ -1,0 +1,289 @@
+.footer {
+   background-color: #21233d;
+   text-align: center;
+   color: #ffffff;
+   padding: 0 15px;
+
+   @media screen and (min-width: 1024px) {
+      text-align: left;
+      padding: 40px 25px 0 25px;
+   }
+
+   @media screen and (min-width: 1900px) {
+      text-align: left;
+      padding: 40px 240px 0 172px;
+   }
+
+   &__top {
+      @media screen and (min-width: 1024px) {
+         display: flex;
+         justify-content: space-between;
+         padding-bottom: 25px;
+         border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+         margin-bottom: 15px;
+      }
+   }
+   &__left {
+      margin-bottom: 30px;
+      @media screen and (min-width: 1024px) {
+         margin-bottom: 0;
+      }
+   }
+
+   &__left--logo {
+      margin-bottom: 40px;
+      @media screen and (min-width: 1024px) {
+         margin-bottom: 20px;
+      }
+   }
+
+   &__left--mode {
+      font-weight: 500;
+      font-size: 12px;
+      margin-bottom: 20px;
+      @media screen and (min-width: 1024px) {
+         font-size: 14px;
+         line-height: 1.8;
+         margin-bottom: 15px;
+      }
+   }
+
+   &__left--location {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      line-height: 1.8;
+      text-decoration: underline;
+      color: #ffffff;
+      margin-bottom: 15px;
+      @media screen and (min-width: 1024px) {
+         font-size: 14px;
+         margin-bottom: 20px;
+         flex-direction: unset;
+         justify-content: unset;
+      }
+   }
+
+   &__left--location-icon {
+      @media screen and (min-width: 1024px) {
+         margin-right: 10px;
+      }
+   }
+
+   &__left--phones {
+      @media screen and (min-width: 1024px) {
+         display: flex;
+         align-items: center;
+      }
+   }
+
+   &__left--phones-icon {
+      @media screen and (min-width: 1024px) {
+         margin-right: 8px;
+      }
+   }
+
+   &__left--phones-list {
+      @media screen and (min-width: 1024px) {
+         padding-left: 8px;
+         border-left: 1px solid #ffffff;
+      }
+   }
+
+   &__left--phones-list-item > &__left--phones-list-item-link {
+      display: block;
+      font-size: 14px;
+      color: #ffffff;
+   }
+
+   &__left--phones-list-item:not(:last-child) {
+      margin-bottom: 10px;
+   }
+
+   &__right {
+      margin-bottom: 50px;
+      @media screen and (min-width: 1024px) {
+         display: flex;
+      }
+   }
+
+   &__right--menu,
+   &__right--pay {
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      @media screen and (min-width: 1024px) {
+         padding-bottom: 0;
+         border-bottom: 0;
+         margin-bottom: 0;
+         padding-right: 25px;
+         border-right: 1px solid rgba(255, 255, 255, 0.15);
+         margin-right: 25px;
+      }
+      @media screen and (min-width: 1170px) {
+         padding-right: 75px;
+         margin-right: 75px;
+      }
+   }
+
+   &__right--menu-title,
+   &__right--pay-title,
+   &__right--social-links-title {
+      margin-bottom: 15px;
+      @media screen and (min-width: 1024px) {
+         margin-bottom: 20px;
+      }
+   }
+
+   &__right--menu-list {
+      display: flex;
+      flex-wrap: wrap;
+      @media screen and (min-width: 1024px) {
+         flex-wrap: unset;
+         flex-direction: column;
+      }
+   }
+
+   &__right--menu-list-item {
+      width: calc((100% - 2 * 10px) / 2);
+      margin: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 46px;
+      @media screen and (min-width: 1024px) {
+         width: unset;
+         margin: 0;
+         border: none;
+      }
+   }
+
+   &__right--menu-list-item > &__right--menu-list-item-link {
+      display: flex;
+      justify-content: center;
+      padding: 5px;
+      font-size: 12px;
+      line-height: 1.8;
+      color: #ffffff;
+      @media screen and (min-width: 1024px) {
+         justify-content: flex-start;
+         font-size: 14px;
+      }
+   }
+
+   &__right--pay-list {
+      display: flex;
+      align-items: center;
+      @media screen and (min-width: 1024px) {
+         flex-direction: column;
+         align-items: flex-start;
+      }
+   }
+
+   &__right--pay-list-item {
+      width: calc((100% - 3 * 10px) / 3);
+      margin: 5px;
+      @media screen and (min-width: 1024px) {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         width: unset;
+         margin: 0;
+         border: 1px solid rgba(255, 255, 255, 0.24);
+         border-radius: 42px;
+         padding: 10px 15px;
+      }
+   }
+
+   &__right--pay-list-item:not(:last-child) {
+      @media screen and (min-width: 1024px) {
+         margin-bottom: 20px;
+      }
+   }
+
+   &__right--pay-list-item-icon {
+      width: 80px;
+      @media screen and (min-width: 1024px) {
+         width: 134px;
+         height: 35px;
+      }
+   }
+
+   &__right--social-links-list {
+      display: flex;
+      flex-wrap: wrap;
+      @media screen and (min-width: 1024px) {
+         flex-wrap: unset;
+         flex-direction: column;
+         align-items: flex-start;
+      }
+   }
+
+   &__right--social-links-list-item {
+      width: calc((100% - 2 * 10px) / 2);
+      margin: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 24px;
+      @media screen and (min-width: 1024px) {
+         width: unset;
+         margin: 0;
+         border: none;
+      }
+   }
+
+   &__right--social-links-list-item:last-child {
+      margin: 5 auto;
+      width: 100%;
+      @media screen and (min-width: 1024px) {
+         margin: 0;
+         width: unset;
+      }
+   }
+
+   &__right--social-links-list-item > &__right--social-links-list-item-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+      color: #ffffff;
+      font-size: 14px;
+      line-height: 1.8;
+      @media screen and (min-width: 1024px) {
+         padding: 0;
+         justify-content: unset;
+         font-size: 16px;
+      }
+   }
+
+   &__right--social-links-list-item:not(:last-child) {
+      margin-bottom: 18px;
+   }
+
+   &__right--social-links-list-item-icon {
+      margin-right: 13px;
+   }
+
+   &__bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 15px;
+   }
+
+   &__bottom--text {
+      font-size: 12px;
+      line-height: 1.8;
+      @media screen and (min-width: 1024px) {
+         font-size: 14px;
+      }
+   }
+
+   &__bottom--icon {
+      width: 26px;
+      height: 26px;
+      @media screen and (min-width: 1024px) {
+         width: 39px;
+         height: 39px;
+      }
+   }
+}

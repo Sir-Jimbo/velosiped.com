@@ -1,0 +1,1836 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Головна - velosiped.com">
+   <link rel="stylesheet" rel="preload" as="style"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap"
+      rel="stylesheet">
+   <link rel="stylesheet" rel="preload" as="style" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+   <link rel="stylesheet" rel="preload" as="style" href="./css/style.min.css">
+   <title>Головна</title>
+</head>
+
+<body id="body">
+   <header class="header">
+      <div class="header__logo">
+         <a class="header__logo--link" href="/">
+            <svg class="header__logo--icon">
+               <use href="./images/sprite.svg#icon-logo"></use>
+            </svg>
+         </a>
+      </div>
+      <div class="header__button">
+         <a class="header__button--link" href="/">
+            <svg class="header__button--icon" width="18" height="18">
+               <use href="./images/sprite.svg#icon-katalog"></use>
+            </svg>
+            <span class="header__button--text">Каталог товарів</span>
+         </a>
+      </div>
+      <ul class="header__mode">
+         <li class="header__mode--text">
+            Пн-Пт 10:00-20:00,
+         </li>
+         <li class="header__mode--text">
+            Сб 10:00-19:00, Нд 10:00-18:00
+         </li>
+      </ul>
+      <div class="header__phones">
+         <a class="header__phones--link" href="#">
+            <svg class="header__phones--icon" width="12" height="19">
+               <use href="./images/sprite.svg#icon-phone"></use>
+            </svg>
+            <span class="header__phones--number">(044) 227–33–55</span>
+            <svg class="header__phones--polygon-icon" width="7" height="5">
+               <use href="./images/sprite.svg#icon-polygon"></use>
+            </svg>
+         </a>
+      </div>
+      <ul class="header__social-links">
+         <li class="header__social-links--item">
+            <a class="header__social-links--item-link" href="https://www.facebook.com/" target="_blank"
+               rel="noopener noreferrer">
+               <svg class="header__social-links--item-icon" width="19" height="19">
+                  <use href="./images/sprite.svg#icon-facebook"></use>
+               </svg>
+            </a>
+         </li>
+         <li class="header__social-links--item">
+            <a class="header__social-links--item-link" href="https://www.instagram.com/" target="_blank"
+               rel="noopener noreferrer">
+               <svg class="header__social-links--item-icon" width="19" height="19">
+                  <use href="./images/sprite.svg#icon-instagram"></use>
+               </svg>
+            </a>
+         </li>
+         <li class="header__social-links--item">
+            <a class="header__social-links--item-link" href="https://www.youtube.com/" target="_blank"
+               rel="noopener noreferrer">
+               <svg class="header__social-links--item-icon" width="19" height="19">
+                  <use href="./images/sprite.svg#icon-youtube"></use>
+               </svg>
+            </a>
+         </li>
+      </ul>
+      <div class="header__contacts">
+         <a class="header__contacts--link" href="http://">Контакти</a>
+      </div>
+      <form class="header__finder">
+         <input class="header__finder--search" type="text" placeholder="Я шукаю...">
+         <button class="header__finder--button" type="submit" aria-label="search">
+            <svg class="header__finder--button-icon" width="24" height="24">
+               <use href="./images/sprite.svg#icon-search"></use>
+            </svg>
+         </button>
+      </form>
+      <ul class="header__icons">
+         <li class="header__icons--item">
+            <a class="header__icons--item-link" href="#">
+               <svg class="header__icons--item-icon" width="24" height="24">
+                  <use href="./images/sprite.svg#icon-profile"></use>
+               </svg>
+            </a>
+         </li>
+         <li class="header__icons--item">
+            <a class="header__icons--item-link" href="#">
+               <svg class="header__icons--item-icon" width="24" height="24">
+                  <use href="./images/sprite.svg#icon-cart"></use>
+               </svg>
+            </a>
+         </li>
+      </ul>
+      <div class="header__languages">
+         <a class="header__languages--language-uk" href="#">Uk</a>
+         <label class="header__languages--switch">
+            <input type="checkbox">
+            <span class="header__languages--switch-slider"></span>
+         </label>
+         <a class="header__languages--language-ru" href="#">Ru</a>
+      </div>
+      <div class="header__burger" onclick="openMenu()">
+         <svg class="header__burger--icon" width="13" height="11">
+            <use href="./images/sprite.svg#icon-menu"></use>
+         </svg>
+      </div>
+      <div class="overlay" id="overlay" onclick="openMenu()"></div>
+      <nav class="header__mobile-menu" id="mobile-menu">
+         <div class=" header__mobile-menu--languages">
+            <a class="header__mobile-menu--language-uk" href="#">Uk</a>
+            <label class="header__mobile-menu--switch">
+               <input type="checkbox">
+               <span class="header__mobile-menu--switch-slider"></span>
+            </label>
+            <a class="header__mobile-menu--language-ru" href="#">Ru</a>
+         </div>
+         <h1 class="header__mobile-menu--title">Каталог товарів</h1>
+         <ul class="header__mobile-menu--list">
+            <li class="header__mobile-menu--item">
+               <a class="header__mobile-menu--item-link" href="http://">
+                  <svg class="header__mobile-menu--item-icon" width="25" height="17">
+                     <use href="./images/sprite.svg#icon-velo"></use>
+                  </svg>
+                  <span class="header__mobile-menu--item-text">Велосипеды</span>
+               </a>
+            </li>
+            <li class="header__mobile-menu--item">
+               <a class="header__mobile-menu--item-link" href="http://">
+                  <svg class="header__mobile-menu--item-icon" width="18" height="18">
+                     <use href="./images/sprite.svg#icon-komplekt"></use>
+                  </svg>
+                  <span class="header__mobile-menu--item-text">Комплектующие</span>
+               </a>
+            </li>
+            <li class="header__mobile-menu--item">
+               <a class="header__mobile-menu--item-link" href="http://">
+                  <svg class="header__mobile-menu--item-icon" width="15" height="18">
+                     <use href="./images/sprite.svg#icon-wear"></use>
+                  </svg>
+                  <span class="header__mobile-menu--item-text">Одежда и обувь</span>
+               </a>
+            </li>
+            <li class="header__mobile-menu--item">
+               <a class="header__mobile-menu--item-link" href="http://">
+                  <svg class="header__mobile-menu--item-icon" width="6" height="18">
+                     <use href="./images/sprite.svg#icon-accessories"></use>
+                  </svg>
+                  <span class="header__mobile-menu--item-text">Аксессуары</span>
+               </a>
+            </li>
+            <li class="header__mobile-menu--item">
+               <a class="header__mobile-menu--item-link" href="http://">
+                  <svg class="header__mobile-menu--item-icon" width="18" height="18">
+                     <use href="./images/sprite.svg#icon-repair"></use>
+                  </svg>
+                  <span class="header__mobile-menu--item-text">Ремонт и уход</span>
+               </a>
+            </li>
+            <li class="header__mobile-menu--item">
+               <a class="header__mobile-menu--item-link" href="http://">
+                  <svg class="header__mobile-menu--item-icon" width="14" height="18">
+                     <use href="./images/sprite.svg#icon-cosmetics"></use>
+                  </svg>
+                  <span class="header__mobile-menu--item-text">Спортивне харчування та косметика</span>
+               </a>
+            </li>
+            <li class="header__mobile-menu--item">
+               <a class="header__mobile-menu--item-link" href="http://">
+                  <svg class="header__mobile-menu--item-icon" width="15" height="18">
+                     <use href="./images/sprite.svg#icon-gift"></use>
+                  </svg>
+                  <span class="header__mobile-menu--item-text">Подарунки</span>
+               </a>
+            </li>
+         </ul>
+         <!--<ul class="header__mobile-menu--doplist">
+            <li class="header__mobile-menu--doplist-item">
+               <a class="header__mobile-menu--doplist-item-link" href="http://">
+                  <svg class="header__mobile-menu--doplist-item-icon" width="19" height="19">
+                     <use href="./images/sprite.svg#icon-workshop"></use>
+                  </svg>
+                  <span class="header__mobile-menu--doplist-item-text">Мастерская</span>
+               </a>
+            </li>
+            <li class="header__mobile-menu--doplist-item">
+               <a class="header__mobile-menu--doplist-item-link" href="http://">
+                  <svg class="header__mobile-menu--doplist-item-icon" width="19" height="19">
+                     <use href="./images/sprite.svg#icon-discont"></use>
+                  </svg>
+                  <span class="header__mobile-menu--doplist-item-text">Дисконтна программа</span>
+               </a>
+            </li>
+         </ul>-->
+         <div class="header__mobile-menu--profile">
+            <a class="header__mobile-menu--profile-link" href="#">
+               <svg class="header__mobile-menu--profile-icon" width="18" height="18">
+                  <use href="./images/sprite.svg#icon-profile"></use>
+               </svg>
+               <span class="header__mobile-menu--profile-text">Особистий кабiнет</span>
+            </a>
+         </div>
+         <div class="header__mobile-menu--contacts">
+            <a class="header__mobile-menu--contacts-link" href="http://">Контакти</a>
+         </div>
+         <div class="header__mobile-menu--phones">
+            <svg class="header__mobile-menu--phones-icon" width="12" height="19">
+               <use href="./images/sprite.svg#icon-phone"></use>
+            </svg>
+            <ul class="header__mobile-menu--phones-list">
+               <li class="header__mobile-menu--phones-list-item">
+                  <a class="header__mobile-menu--phones-list-item-link" href="tel:+380442273355"><span>(044)</span>
+                     227–33–55</a>
+               </li>
+               <li class="header__mobile-menu--phones-list-item">
+                  <a class="header__mobile-menu--phones-list-item-link" href="tel:+380956266885"><span>(095)</span>
+                     626–68–85</a>
+               </li>
+               <li class="header__mobile-menu--phones-list-item">
+                  <a class="header__mobile-menu--phones-list-item-link" href="tel:+380967214211"><span>(096)</span>
+                     721–42–11</a>
+               </li>
+            </ul>
+         </div>
+         <svg onclick="openMenu()" class="header__mobile-menu--close-icon" width="11" height="11">
+            <use href="./images/sprite.svg#icon-close"></use>
+         </svg>
+      </nav>
+
+   </header>
+   <main>
+      <section class="hero">
+         <div class="hero__wrapper">
+            <nav class="hero__menu">
+               <ul class="hero__menu--list">
+                  <li class="hero__menu--list-item">
+                     <a class="hero__menu--list-item-link" href="http://">
+                        <svg class="hero__menu--list-item-icon" width="25" height="17">
+                           <use href="./images/sprite.svg#icon-velo"></use>
+                        </svg>
+                        <span class="hero__menu--list-item-text">Велосипеды</span>
+                        <svg class="hero__menu--list-item-icon-right" width="7" height="5">
+                           <use href="./images/sprite.svg#icon-polygon"></use>
+                        </svg>
+                     </a>
+                  </li>
+                  <li class="hero__menu--list-item">
+                     <a class="hero__menu--list-item-link" href="http://">
+                        <svg class="hero__menu--list-item-icon" width="18" height="18">
+                           <use href="./images/sprite.svg#icon-komplekt"></use>
+                        </svg>
+                        <span class="hero__menu--list-item-text">Комплектующие</span>
+                        <svg class="hero__menu--list-item-icon-right" width="7" height="5">
+                           <use href="./images/sprite.svg#icon-polygon"></use>
+                        </svg>
+                     </a>
+                  </li>
+                  <li class="hero__menu--list-item">
+                     <a class="hero__menu--list-item-link" href="http://">
+                        <svg class="hero__menu--list-item-icon" width="15" height="18">
+                           <use href="./images/sprite.svg#icon-wear"></use>
+                        </svg>
+                        <span class="hero__menu--list-item-text">Одежда и обувь</span>
+                        <svg class="hero__menu--list-item-icon-right" width="7" height="5">
+                           <use href="./images/sprite.svg#icon-polygon"></use>
+                        </svg>
+                     </a>
+                  </li>
+                  <li class="hero__menu--list-item">
+                     <a class="hero__menu--list-item-link" href="http://">
+                        <svg class="hero__menu--list-item-icon" width="6" height="18">
+                           <use href="./images/sprite.svg#icon-accessories"></use>
+                        </svg>
+                        <span class="hero__menu--list-item-text">Аксессуары</span>
+                        <svg class="hero__menu--list-item-icon-right" width="7" height="5">
+                           <use href="./images/sprite.svg#icon-polygon"></use>
+                        </svg>
+                     </a>
+                  </li>
+                  <li class="hero__menu--list-item">
+                     <a class="hero__menu--list-item-link" href="http://">
+                        <svg class="hero__menu--list-item-icon" width="18" height="18">
+                           <use href="./images/sprite.svg#icon-repair"></use>
+                        </svg>
+                        <span class="hero__menu--list-item-text">Ремонт и уход</span>
+                        <svg class="hero__menu--list-item-icon-right" width="7" height="5">
+                           <use href="./images/sprite.svg#icon-polygon"></use>
+                        </svg>
+                     </a>
+                  </li>
+                  <li class="hero__menu--list-item">
+                     <a class="hero__menu--list-item-link" href="http://">
+                        <svg class="hero__menu--list-item-icon" width="14" height="18">
+                           <use href="./images/sprite.svg#icon-cosmetics"></use>
+                        </svg>
+                        <span class="hero__menu--list-item-text">Спортивне харчування та косметика</span>
+                        <svg class="hero__menu--list-item-icon-right" width="7" height="5">
+                           <use href="./images/sprite.svg#icon-polygon"></use>
+                        </svg>
+                     </a>
+                  </li>
+                  <li class="hero__menu--list-item">
+                     <a class="hero__menu--list-item-link" href="http://">
+                        <svg class="hero__menu--list-item-icon" width="15" height="18">
+                           <use href="./images/sprite.svg#icon-gift"></use>
+                        </svg>
+                        <span class="hero__menu--list-item-text">Подарунки</span>
+                        <svg class="hero__menu--list-item-icon-right" width="7" height="5">
+                           <use href="./images/sprite.svg#icon-polygon"></use>
+                        </svg>
+                     </a>
+                  </li>
+               </ul>
+               <ul class="hero__menu--doplist">
+                  <li class="hero__menu--doplist-item">
+                     <a class="hero__menu--doplist-item-link" href="http://">
+                        <svg class="hero__menu--doplist-item-icon" width="19" height="19">
+                           <use href="./images/sprite.svg#icon-workshop"></use>
+                        </svg>
+                        <span class="hero__menu--doplist-item-text">Мастерская</span>
+                     </a>
+                  </li>
+                  <li class="hero__menu--doplist-item">
+                     <a class="hero__menu--doplist-item-link" href="http://">
+                        <svg class="hero__menu--doplist-item-icon" width="19" height="19">
+                           <use href="./images/sprite.svg#icon-discont"></use>
+                        </svg>
+                        <span class="hero__menu--doplist-item-text">Дисконтна программа</span>
+                     </a>
+                  </li>
+               </ul>
+            </nav>
+            <div class="hero__slider swiper">
+               <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                     <picture class="hero__slider--image">
+                        <source class="swiper-lazy" type="image/webp" srcset="./images/slide1.webp">
+                        <source class="swiper-lazy" type="image/jpeg" srcset="./images/slide1.jpg">
+                        <img class="swiper-lazy" data-src="./images/slide1.jpg" src="./images/slide1.jpg" alt=""
+                           width="380" height="583">
+                     </picture>
+                     <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide">
+                     <picture class="hero__slider--image">
+                        <source class="swiper-lazy" type="image/webp" srcset="./images/slide2.webp">
+                        <source class="swiper-lazy" type="image/jpeg" srcset="./images/slide2.jpg">
+                        <img class="swiper-lazy" data-src="./images/slide2.jpg" src="./images/slide2.jpg" alt=""
+                           width="380" height="583">
+                     </picture>
+                     <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide">
+                     <picture class="hero__slider--image">
+                        <source class="swiper-lazy" type="image/webp" srcset="./images/slide3.webp">
+                        <source class="swiper-lazy" type="image/jpeg" srcset="./images/slide3.jpg">
+                        <img class="swiper-lazy" data-src="./images/slide3.jpg" src="./images/slide3.jpg" alt=""
+                           width="380" height="583">
+                     </picture>
+                     <div class="swiper-lazy-preloader"></div>
+                  </div>
+                  <div class="swiper-slide">
+                     <picture class="hero__slider--image">
+                        <source class="swiper-lazy" type="image/webp" srcset="./images/slide1.webp">
+                        <source class="swiper-lazy" type="image/jpeg" srcset="./images/slide1.jpg">
+                        <img class="swiper-lazy" data-src="./images/slide1.jpg" src="./images/slide1.jpg" alt=""
+                           width="380" height="583">
+                     </picture>
+                     <div class="swiper-lazy-preloader"></div>
+                  </div>
+               </div>
+
+            </div>
+            <div class="hero__slider--pagination swiper-pagination"></div>
+         </div>
+         <div class="hero__button">
+            <a class="hero__button--link" href="/">
+               <svg class="hero__button--icon" width="18" height="18">
+                  <use href="./images/sprite.svg#icon-katalog"></use>
+               </svg>
+               <span class="hero__button--text">Каталог товарів</span>
+            </a>
+         </div>
+      </section>
+      <section class="watched container">
+         <h2 class="watched__title">Ви дивилися</h2>
+         <ul class="products" id="showWatched">
+            <li class="products__item">
+               <ul class="products__item--labels">
+                  <li class="products__item--label-sale active">Розпродаж</li>
+                  <li class="products__item--label-top active">Топ продаж</li>
+               </ul>
+               <a class="products__item--link" href="http://">
+                  <picture class="products__item--image">
+                     <source type="image/webp" srcset="./images/Product-image.webp">
+                     <source type="image/jpeg" srcset="./images/Product-image.jpg">
+                     <img src="./images/Product-image.jpg" alt="" width="349" height="286">
+                  </picture>
+                  <h3 class="products__item--title">Велосипед Kellys Cliff 30 Black Orange Black Orange M (19˝)</h3>
+               </a>
+               <div class="products__item--credit">
+                  <svg class="products__item--credit-icon" width="29" height="29">
+                     <use href="./images/sprite.svg#icon-credit"></use>
+                  </svg>
+                  <span class="products__item--credit-text">х 24мес</span>
+               </div>
+               <div class="products__item--bottom">
+                  <ul class="products__item--price">
+                     <li class="products__item--price-old active">
+                        <div class="products__item--price-old-cost">16 900</div>
+                        <div class="products__item--price-old-percent">-18 %</div>
+                     </li>
+                     <li class="products__item--price-new">
+                        <div class="products__item--price-new-cost">15 300
+                           <span class="products__item--price-new-currency">грн</span>
+                        </div>
+                     </li>
+                  </ul>
+                  <div class="products__item--bottom-icons">
+                     <a class="products__item--bottom-icons-comparison" href="#">
+                        <svg class="products__item--bottom-icons-comparison-icon" width="30" height="26">
+                           <use href="./images/sprite.svg#icon-comparison"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-favorites" href="#">
+                        <svg class="products__item--bottom-icons-favorites-icon" width="23" height="22">
+                           <use href="./images/sprite.svg#icon-favorites"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-cart" href="#">
+                        <svg class="products__item--bottom-icons-cart-icon" width="22" height="21">
+                           <use href="./images/sprite.svg#icon-cart"></use>
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+            </li>
+            <li class="products__item">
+               <ul class="products__item--labels">
+                  <li class="products__item--label-sale active">Розпродаж</li>
+                  <li class="products__item--label-top active">Топ продаж</li>
+               </ul>
+               <a class="products__item--link" href="http://">
+                  <picture class="products__item--image">
+                     <source type="image/webp" srcset="./images/Product-image.webp">
+                     <source type="image/jpeg" srcset="./images/Product-image.jpg">
+                     <img src="./images/Product-image.jpg" alt="" width="349" height="286">
+                  </picture>
+                  <h3 class="products__item--title">Велосипед Kellys Cliff 30 Black Orange Black Orange M (19˝)</h3>
+               </a>
+               <div class="products__item--credit">
+                  <svg class="products__item--credit-icon" width="29" height="29">
+                     <use href="./images/sprite.svg#icon-credit"></use>
+                  </svg>
+                  <span class="products__item--credit-text">х 24мес</span>
+               </div>
+               <div class="products__item--bottom">
+                  <ul class="products__item--price">
+                     <li class="products__item--price-old active">
+                        <div class="products__item--price-old-cost">16 900</div>
+                        <div class="products__item--price-old-percent">-18 %</div>
+                     </li>
+                     <li class="products__item--price-new">
+                        <div class="products__item--price-new-cost">15 300
+                           <span class="products__item--price-new-currency">грн</span>
+                        </div>
+                     </li>
+                  </ul>
+                  <div class="products__item--bottom-icons">
+                     <a class="products__item--bottom-icons-comparison" href="#">
+                        <svg class="products__item--bottom-icons-comparison-icon" width="30" height="26">
+                           <use href="./images/sprite.svg#icon-comparison"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-favorites" href="#">
+                        <svg class="products__item--bottom-icons-favorites-icon" width="23" height="22">
+                           <use href="./images/sprite.svg#icon-favorites"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-cart" href="#">
+                        <svg class="products__item--bottom-icons-cart-icon" width="22" height="21">
+                           <use href="./images/sprite.svg#icon-cart"></use>
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+            </li>
+            <li class="products__item">
+               <ul class="products__item--labels">
+                  <li class="products__item--label-sale active">Розпродаж</li>
+                  <li class="products__item--label-top active">Топ продаж</li>
+               </ul>
+               <a class="products__item--link" href="http://">
+                  <picture class="products__item--image">
+                     <source type="image/webp" srcset="./images/Product-image.webp">
+                     <source type="image/jpeg" srcset="./images/Product-image.jpg">
+                     <img src="./images/Product-image.jpg" alt="" width="349" height="286">
+                  </picture>
+                  <h3 class="products__item--title">Велосипед Kellys Cliff 30 Black Orange Black Orange M (19˝)</h3>
+               </a>
+               <div class="products__item--credit">
+                  <svg class="products__item--credit-icon" width="29" height="29">
+                     <use href="./images/sprite.svg#icon-credit"></use>
+                  </svg>
+                  <span class="products__item--credit-text">х 24мес</span>
+               </div>
+               <div class="products__item--bottom">
+                  <ul class="products__item--price">
+                     <li class="products__item--price-old active">
+                        <div class="products__item--price-old-cost">16 900</div>
+                        <div class="products__item--price-old-percent">-18 %</div>
+                     </li>
+                     <li class="products__item--price-new">
+                        <div class="products__item--price-new-cost">15 300
+                           <span class="products__item--price-new-currency">грн</span>
+                        </div>
+                     </li>
+                  </ul>
+                  <div class="products__item--bottom-icons">
+                     <a class="products__item--bottom-icons-comparison" href="#">
+                        <svg class="products__item--bottom-icons-comparison-icon" width="30" height="26">
+                           <use href="./images/sprite.svg#icon-comparison"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-favorites" href="#">
+                        <svg class="products__item--bottom-icons-favorites-icon" width="23" height="22">
+                           <use href="./images/sprite.svg#icon-favorites"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-cart" href="#">
+                        <svg class="products__item--bottom-icons-cart-icon" width="22" height="21">
+                           <use href="./images/sprite.svg#icon-cart"></use>
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+            </li>
+            <li class="products__item">
+               <ul class="products__item--labels">
+                  <li class="products__item--label-sale active">Розпродаж</li>
+                  <li class="products__item--label-top active">Топ продаж</li>
+               </ul>
+               <a class="products__item--link" href="http://">
+                  <picture class="products__item--image">
+                     <source type="image/webp" srcset="./images/Product-image.webp">
+                     <source type="image/jpeg" srcset="./images/Product-image.jpg">
+                     <img src="./images/Product-image.jpg" alt="" width="349" height="286">
+                  </picture>
+                  <h3 class="products__item--title">Велосипед Kellys Cliff 30 Black Orange Black Orange M (19˝)</h3>
+               </a>
+               <div class="products__item--credit">
+                  <svg class="products__item--credit-icon" width="29" height="29">
+                     <use href="./images/sprite.svg#icon-credit"></use>
+                  </svg>
+                  <span class="products__item--credit-text">х 24мес</span>
+               </div>
+               <div class="products__item--bottom">
+                  <ul class="products__item--price">
+                     <li class="products__item--price-old active">
+                        <div class="products__item--price-old-cost">16 900</div>
+                        <div class="products__item--price-old-percent">-18 %</div>
+                     </li>
+                     <li class="products__item--price-new">
+                        <div class="products__item--price-new-cost">15 300
+                           <span class="products__item--price-new-currency">грн</span>
+                        </div>
+                     </li>
+                  </ul>
+                  <div class="products__item--bottom-icons">
+                     <a class="products__item--bottom-icons-comparison" href="#">
+                        <svg class="products__item--bottom-icons-comparison-icon" width="30" height="26">
+                           <use href="./images/sprite.svg#icon-comparison"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-favorites" href="#">
+                        <svg class="products__item--bottom-icons-favorites-icon" width="23" height="22">
+                           <use href="./images/sprite.svg#icon-favorites"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-cart" href="#">
+                        <svg class="products__item--bottom-icons-cart-icon" width="22" height="21">
+                           <use href="./images/sprite.svg#icon-cart"></use>
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+            </li>
+            <li class="products__item">
+               <ul class="products__item--labels">
+                  <li class="products__item--label-sale active">Розпродаж</li>
+                  <li class="products__item--label-top active">Топ продаж</li>
+               </ul>
+               <a class="products__item--link" href="http://">
+                  <picture class="products__item--image">
+                     <source type="image/webp" srcset="./images/Product-image.webp">
+                     <source type="image/jpeg" srcset="./images/Product-image.jpg">
+                     <img src="./images/Product-image.jpg" alt="" width="349" height="286">
+                  </picture>
+                  <h3 class="products__item--title">Велосипед Kellys Cliff 30 Black Orange Black Orange M (19˝)</h3>
+               </a>
+               <div class="products__item--credit">
+                  <svg class="products__item--credit-icon" width="29" height="29">
+                     <use href="./images/sprite.svg#icon-credit"></use>
+                  </svg>
+                  <span class="products__item--credit-text">х 24мес</span>
+               </div>
+               <div class="products__item--bottom">
+                  <ul class="products__item--price">
+                     <li class="products__item--price-old active">
+                        <div class="products__item--price-old-cost">16 900</div>
+                        <div class="products__item--price-old-percent">-18 %</div>
+                     </li>
+                     <li class="products__item--price-new">
+                        <div class="products__item--price-new-cost">15 300
+                           <span class="products__item--price-new-currency">грн</span>
+                        </div>
+                     </li>
+                  </ul>
+                  <div class="products__item--bottom-icons">
+                     <a class="products__item--bottom-icons-comparison" href="#">
+                        <svg class="products__item--bottom-icons-comparison-icon" width="30" height="26">
+                           <use href="./images/sprite.svg#icon-comparison"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-favorites" href="#">
+                        <svg class="products__item--bottom-icons-favorites-icon" width="23" height="22">
+                           <use href="./images/sprite.svg#icon-favorites"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-cart" href="#">
+                        <svg class="products__item--bottom-icons-cart-icon" width="22" height="21">
+                           <use href="./images/sprite.svg#icon-cart"></use>
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+            </li>
+            <li class="products__item">
+               <ul class="products__item--labels">
+                  <li class="products__item--label-sale active">Розпродаж</li>
+                  <li class="products__item--label-top active">Топ продаж</li>
+               </ul>
+               <a class="products__item--link" href="http://">
+                  <picture class="products__item--image">
+                     <source type="image/webp" srcset="./images/Product-image.webp">
+                     <source type="image/jpeg" srcset="./images/Product-image.jpg">
+                     <img src="./images/Product-image.jpg" alt="" width="349" height="286">
+                  </picture>
+                  <h3 class="products__item--title">Велосипед Kellys Cliff 30 Black Orange Black Orange M (19˝)</h3>
+               </a>
+               <div class="products__item--credit">
+                  <svg class="products__item--credit-icon" width="29" height="29">
+                     <use href="./images/sprite.svg#icon-credit"></use>
+                  </svg>
+                  <span class="products__item--credit-text">х 24мес</span>
+               </div>
+               <div class="products__item--bottom">
+                  <ul class="products__item--price">
+                     <li class="products__item--price-old active">
+                        <div class="products__item--price-old-cost">16 900</div>
+                        <div class="products__item--price-old-percent">-18 %</div>
+                     </li>
+                     <li class="products__item--price-new">
+                        <div class="products__item--price-new-cost">15 300
+                           <span class="products__item--price-new-currency">грн</span>
+                        </div>
+                     </li>
+                  </ul>
+                  <div class="products__item--bottom-icons">
+                     <a class="products__item--bottom-icons-comparison" href="#">
+                        <svg class="products__item--bottom-icons-comparison-icon" width="30" height="26">
+                           <use href="./images/sprite.svg#icon-comparison"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-favorites" href="#">
+                        <svg class="products__item--bottom-icons-favorites-icon" width="23" height="22">
+                           <use href="./images/sprite.svg#icon-favorites"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-cart" href="#">
+                        <svg class="products__item--bottom-icons-cart-icon" width="22" height="21">
+                           <use href="./images/sprite.svg#icon-cart"></use>
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+            </li>
+            <li class="products__item">
+               <ul class="products__item--labels">
+                  <li class="products__item--label-sale active">Розпродаж</li>
+                  <li class="products__item--label-top active">Топ продаж</li>
+               </ul>
+               <a class="products__item--link" href="http://">
+                  <picture class="products__item--image">
+                     <source type="image/webp" srcset="./images/Product-image.webp">
+                     <source type="image/jpeg" srcset="./images/Product-image.jpg">
+                     <img src="./images/Product-image.jpg" alt="" width="349" height="286">
+                  </picture>
+                  <h3 class="products__item--title">Велосипед Kellys Cliff 30 Black Orange Black Orange M (19˝)</h3>
+               </a>
+               <div class="products__item--credit">
+                  <svg class="products__item--credit-icon" width="29" height="29">
+                     <use href="./images/sprite.svg#icon-credit"></use>
+                  </svg>
+                  <span class="products__item--credit-text">х 24мес</span>
+               </div>
+               <div class="products__item--bottom">
+                  <ul class="products__item--price">
+                     <li class="products__item--price-old active">
+                        <div class="products__item--price-old-cost">16 900</div>
+                        <div class="products__item--price-old-percent">-18 %</div>
+                     </li>
+                     <li class="products__item--price-new">
+                        <div class="products__item--price-new-cost">15 300
+                           <span class="products__item--price-new-currency">грн</span>
+                        </div>
+                     </li>
+                  </ul>
+                  <div class="products__item--bottom-icons">
+                     <a class="products__item--bottom-icons-comparison" href="#">
+                        <svg class="products__item--bottom-icons-comparison-icon" width="30" height="26">
+                           <use href="./images/sprite.svg#icon-comparison"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-favorites" href="#">
+                        <svg class="products__item--bottom-icons-favorites-icon" width="23" height="22">
+                           <use href="./images/sprite.svg#icon-favorites"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-cart" href="#">
+                        <svg class="products__item--bottom-icons-cart-icon" width="22" height="21">
+                           <use href="./images/sprite.svg#icon-cart"></use>
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+            </li>
+            <li class="products__item">
+               <ul class="products__item--labels">
+                  <li class="products__item--label-sale active">Розпродаж</li>
+                  <li class="products__item--label-top active">Топ продаж</li>
+               </ul>
+               <a class="products__item--link" href="http://">
+                  <picture class="products__item--image">
+                     <source type="image/webp" srcset="./images/Product-image.webp">
+                     <source type="image/jpeg" srcset="./images/Product-image.jpg">
+                     <img src="./images/Product-image.jpg" alt="" width="349" height="286">
+                  </picture>
+                  <h3 class="products__item--title">Велосипед Kellys Cliff 30 Black Orange Black Orange M (19˝)</h3>
+               </a>
+               <div class="products__item--credit">
+                  <svg class="products__item--credit-icon" width="29" height="29">
+                     <use href="./images/sprite.svg#icon-credit"></use>
+                  </svg>
+                  <span class="products__item--credit-text">х 24мес</span>
+               </div>
+               <div class="products__item--bottom">
+                  <ul class="products__item--price">
+                     <li class="products__item--price-old active">
+                        <div class="products__item--price-old-cost">16 900</div>
+                        <div class="products__item--price-old-percent">-18 %</div>
+                     </li>
+                     <li class="products__item--price-new">
+                        <div class="products__item--price-new-cost">15 300
+                           <span class="products__item--price-new-currency">грн</span>
+                        </div>
+                     </li>
+                  </ul>
+                  <div class="products__item--bottom-icons">
+                     <a class="products__item--bottom-icons-comparison" href="#">
+                        <svg class="products__item--bottom-icons-comparison-icon" width="30" height="26">
+                           <use href="./images/sprite.svg#icon-comparison"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-favorites" href="#">
+                        <svg class="products__item--bottom-icons-favorites-icon" width="23" height="22">
+                           <use href="./images/sprite.svg#icon-favorites"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-cart" href="#">
+                        <svg class="products__item--bottom-icons-cart-icon" width="22" height="21">
+                           <use href="./images/sprite.svg#icon-cart"></use>
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+            </li>
+         </ul>
+      </section>
+      <section class="products__button" onclick="openSectionWatched()">
+         <svg class="products__button--icon" width="32" height="32">
+            <use href="./images/sprite.svg#icon-expand"></use>
+         </svg>
+         <span class="products__button--text">Розгорнути</span>
+      </section>
+      <section class="sale container">
+         <h2 class="sale__title">Розпродаж</h2>
+         <ul class="products" id="showSale">
+            <li class="products__item">
+               <ul class="products__item--labels">
+                  <li class="products__item--label-sale active">Розпродаж</li>
+                  <li class="products__item--label-top active">Топ продаж</li>
+               </ul>
+               <a class="products__item--link" href="http://">
+                  <picture class="products__item--image">
+                     <source type="image/webp" srcset="./images/Product-image.webp">
+                     <source type="image/jpeg" srcset="./images/Product-image.jpg">
+                     <img src="./images/Product-image.jpg" alt="" width="349" height="286">
+                  </picture>
+                  <h3 class="products__item--title">Велосипед Kellys Cliff 30 Black Orange Black Orange M (19˝)</h3>
+               </a>
+               <div class="products__item--credit">
+                  <svg class="products__item--credit-icon" width="29" height="29">
+                     <use href="./images/sprite.svg#icon-credit"></use>
+                  </svg>
+                  <span class="products__item--credit-text">х 24мес</span>
+               </div>
+               <div class="products__item--bottom">
+                  <ul class="products__item--price">
+                     <li class="products__item--price-old active">
+                        <div class="products__item--price-old-cost">16 900</div>
+                        <div class="products__item--price-old-percent">-18 %</div>
+                     </li>
+                     <li class="products__item--price-new">
+                        <div class="products__item--price-new-cost">15 300
+                           <span class="products__item--price-new-currency">грн</span>
+                        </div>
+                     </li>
+                  </ul>
+                  <div class="products__item--bottom-icons">
+                     <a class="products__item--bottom-icons-comparison" href="#">
+                        <svg class="products__item--bottom-icons-comparison-icon" width="30" height="26">
+                           <use href="./images/sprite.svg#icon-comparison"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-favorites" href="#">
+                        <svg class="products__item--bottom-icons-favorites-icon" width="23" height="22">
+                           <use href="./images/sprite.svg#icon-favorites"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-cart" href="#">
+                        <svg class="products__item--bottom-icons-cart-icon" width="22" height="21">
+                           <use href="./images/sprite.svg#icon-cart"></use>
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+            </li>
+            <li class="products__item">
+               <ul class="products__item--labels">
+                  <li class="products__item--label-sale active">Розпродаж</li>
+                  <li class="products__item--label-top active">Топ продаж</li>
+               </ul>
+               <a class="products__item--link" href="http://">
+                  <picture class="products__item--image">
+                     <source type="image/webp" srcset="./images/Product-image.webp">
+                     <source type="image/jpeg" srcset="./images/Product-image.jpg">
+                     <img src="./images/Product-image.jpg" alt="" width="349" height="286">
+                  </picture>
+                  <h3 class="products__item--title">Велосипед Kellys Cliff 30 Black Orange Black Orange M (19˝)</h3>
+               </a>
+               <div class="products__item--credit">
+                  <svg class="products__item--credit-icon" width="29" height="29">
+                     <use href="./images/sprite.svg#icon-credit"></use>
+                  </svg>
+                  <span class="products__item--credit-text">х 24мес</span>
+               </div>
+               <div class="products__item--bottom">
+                  <ul class="products__item--price">
+                     <li class="products__item--price-old active">
+                        <div class="products__item--price-old-cost">16 900</div>
+                        <div class="products__item--price-old-percent">-18 %</div>
+                     </li>
+                     <li class="products__item--price-new">
+                        <div class="products__item--price-new-cost">15 300
+                           <span class="products__item--price-new-currency">грн</span>
+                        </div>
+                     </li>
+                  </ul>
+                  <div class="products__item--bottom-icons">
+                     <a class="products__item--bottom-icons-comparison" href="#">
+                        <svg class="products__item--bottom-icons-comparison-icon" width="30" height="26">
+                           <use href="./images/sprite.svg#icon-comparison"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-favorites" href="#">
+                        <svg class="products__item--bottom-icons-favorites-icon" width="23" height="22">
+                           <use href="./images/sprite.svg#icon-favorites"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-cart" href="#">
+                        <svg class="products__item--bottom-icons-cart-icon" width="22" height="21">
+                           <use href="./images/sprite.svg#icon-cart"></use>
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+            </li>
+            <li class="products__item">
+               <ul class="products__item--labels">
+                  <li class="products__item--label-sale active">Розпродаж</li>
+                  <li class="products__item--label-top active">Топ продаж</li>
+               </ul>
+               <a class="products__item--link" href="http://">
+                  <picture class="products__item--image">
+                     <source type="image/webp" srcset="./images/Product-image.webp">
+                     <source type="image/jpeg" srcset="./images/Product-image.jpg">
+                     <img src="./images/Product-image.jpg" alt="" width="349" height="286">
+                  </picture>
+                  <h3 class="products__item--title">Велосипед Kellys Cliff 30 Black Orange Black Orange M (19˝)</h3>
+               </a>
+               <div class="products__item--credit">
+                  <svg class="products__item--credit-icon" width="29" height="29">
+                     <use href="./images/sprite.svg#icon-credit"></use>
+                  </svg>
+                  <span class="products__item--credit-text">х 24мес</span>
+               </div>
+               <div class="products__item--bottom">
+                  <ul class="products__item--price">
+                     <li class="products__item--price-old active">
+                        <div class="products__item--price-old-cost">16 900</div>
+                        <div class="products__item--price-old-percent">-18 %</div>
+                     </li>
+                     <li class="products__item--price-new">
+                        <div class="products__item--price-new-cost">15 300
+                           <span class="products__item--price-new-currency">грн</span>
+                        </div>
+                     </li>
+                  </ul>
+                  <div class="products__item--bottom-icons">
+                     <a class="products__item--bottom-icons-comparison" href="#">
+                        <svg class="products__item--bottom-icons-comparison-icon" width="30" height="26">
+                           <use href="./images/sprite.svg#icon-comparison"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-favorites" href="#">
+                        <svg class="products__item--bottom-icons-favorites-icon" width="23" height="22">
+                           <use href="./images/sprite.svg#icon-favorites"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-cart" href="#">
+                        <svg class="products__item--bottom-icons-cart-icon" width="22" height="21">
+                           <use href="./images/sprite.svg#icon-cart"></use>
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+            </li>
+            <li class="products__item">
+               <ul class="products__item--labels">
+                  <li class="products__item--label-sale active">Розпродаж</li>
+                  <li class="products__item--label-top active">Топ продаж</li>
+               </ul>
+               <a class="products__item--link" href="http://">
+                  <picture class="products__item--image">
+                     <source type="image/webp" srcset="./images/Product-image.webp">
+                     <source type="image/jpeg" srcset="./images/Product-image.jpg">
+                     <img src="./images/Product-image.jpg" alt="" width="349" height="286">
+                  </picture>
+                  <h3 class="products__item--title">Велосипед Kellys Cliff 30 Black Orange Black Orange M (19˝)</h3>
+               </a>
+               <div class="products__item--credit">
+                  <svg class="products__item--credit-icon" width="29" height="29">
+                     <use href="./images/sprite.svg#icon-credit"></use>
+                  </svg>
+                  <span class="products__item--credit-text">х 24мес</span>
+               </div>
+               <div class="products__item--bottom">
+                  <ul class="products__item--price">
+                     <li class="products__item--price-old active">
+                        <div class="products__item--price-old-cost">16 900</div>
+                        <div class="products__item--price-old-percent">-18 %</div>
+                     </li>
+                     <li class="products__item--price-new">
+                        <div class="products__item--price-new-cost">15 300
+                           <span class="products__item--price-new-currency">грн</span>
+                        </div>
+                     </li>
+                  </ul>
+                  <div class="products__item--bottom-icons">
+                     <a class="products__item--bottom-icons-comparison" href="#">
+                        <svg class="products__item--bottom-icons-comparison-icon" width="30" height="26">
+                           <use href="./images/sprite.svg#icon-comparison"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-favorites" href="#">
+                        <svg class="products__item--bottom-icons-favorites-icon" width="23" height="22">
+                           <use href="./images/sprite.svg#icon-favorites"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-cart" href="#">
+                        <svg class="products__item--bottom-icons-cart-icon" width="22" height="21">
+                           <use href="./images/sprite.svg#icon-cart"></use>
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+            </li>
+            <li class="products__item">
+               <ul class="products__item--labels">
+                  <li class="products__item--label-sale active">Розпродаж</li>
+                  <li class="products__item--label-top active">Топ продаж</li>
+               </ul>
+               <a class="products__item--link" href="http://">
+                  <picture class="products__item--image">
+                     <source type="image/webp" srcset="./images/Product-image.webp">
+                     <source type="image/jpeg" srcset="./images/Product-image.jpg">
+                     <img src="./images/Product-image.jpg" alt="" width="349" height="286">
+                  </picture>
+                  <h3 class="products__item--title">Велосипед Kellys Cliff 30 Black Orange Black Orange M (19˝)</h3>
+               </a>
+               <div class="products__item--credit">
+                  <svg class="products__item--credit-icon" width="29" height="29">
+                     <use href="./images/sprite.svg#icon-credit"></use>
+                  </svg>
+                  <span class="products__item--credit-text">х 24мес</span>
+               </div>
+               <div class="products__item--bottom">
+                  <ul class="products__item--price">
+                     <li class="products__item--price-old active">
+                        <div class="products__item--price-old-cost">16 900</div>
+                        <div class="products__item--price-old-percent">-18 %</div>
+                     </li>
+                     <li class="products__item--price-new">
+                        <div class="products__item--price-new-cost">15 300
+                           <span class="products__item--price-new-currency">грн</span>
+                        </div>
+                     </li>
+                  </ul>
+                  <div class="products__item--bottom-icons">
+                     <a class="products__item--bottom-icons-comparison" href="#">
+                        <svg class="products__item--bottom-icons-comparison-icon" width="30" height="26">
+                           <use href="./images/sprite.svg#icon-comparison"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-favorites" href="#">
+                        <svg class="products__item--bottom-icons-favorites-icon" width="23" height="22">
+                           <use href="./images/sprite.svg#icon-favorites"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-cart" href="#">
+                        <svg class="products__item--bottom-icons-cart-icon" width="22" height="21">
+                           <use href="./images/sprite.svg#icon-cart"></use>
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+            </li>
+            <li class="products__item">
+               <ul class="products__item--labels">
+                  <li class="products__item--label-sale active">Розпродаж</li>
+                  <li class="products__item--label-top active">Топ продаж</li>
+               </ul>
+               <a class="products__item--link" href="http://">
+                  <picture class="products__item--image">
+                     <source type="image/webp" srcset="./images/Product-image.webp">
+                     <source type="image/jpeg" srcset="./images/Product-image.jpg">
+                     <img src="./images/Product-image.jpg" alt="" width="349" height="286">
+                  </picture>
+                  <h3 class="products__item--title">Велосипед Kellys Cliff 30 Black Orange Black Orange M (19˝)</h3>
+               </a>
+               <div class="products__item--credit">
+                  <svg class="products__item--credit-icon" width="29" height="29">
+                     <use href="./images/sprite.svg#icon-credit"></use>
+                  </svg>
+                  <span class="products__item--credit-text">х 24мес</span>
+               </div>
+               <div class="products__item--bottom">
+                  <ul class="products__item--price">
+                     <li class="products__item--price-old active">
+                        <div class="products__item--price-old-cost">16 900</div>
+                        <div class="products__item--price-old-percent">-18 %</div>
+                     </li>
+                     <li class="products__item--price-new">
+                        <div class="products__item--price-new-cost">15 300
+                           <span class="products__item--price-new-currency">грн</span>
+                        </div>
+                     </li>
+                  </ul>
+                  <div class="products__item--bottom-icons">
+                     <a class="products__item--bottom-icons-comparison" href="#">
+                        <svg class="products__item--bottom-icons-comparison-icon" width="30" height="26">
+                           <use href="./images/sprite.svg#icon-comparison"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-favorites" href="#">
+                        <svg class="products__item--bottom-icons-favorites-icon" width="23" height="22">
+                           <use href="./images/sprite.svg#icon-favorites"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-cart" href="#">
+                        <svg class="products__item--bottom-icons-cart-icon" width="22" height="21">
+                           <use href="./images/sprite.svg#icon-cart"></use>
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+            </li>
+            <li class="products__item">
+               <ul class="products__item--labels">
+                  <li class="products__item--label-sale active">Розпродаж</li>
+                  <li class="products__item--label-top active">Топ продаж</li>
+               </ul>
+               <a class="products__item--link" href="http://">
+                  <picture class="products__item--image">
+                     <source type="image/webp" srcset="./images/Product-image.webp">
+                     <source type="image/jpeg" srcset="./images/Product-image.jpg">
+                     <img src="./images/Product-image.jpg" alt="" width="349" height="286">
+                  </picture>
+                  <h3 class="products__item--title">Велосипед Kellys Cliff 30 Black Orange Black Orange M (19˝)</h3>
+               </a>
+               <div class="products__item--credit">
+                  <svg class="products__item--credit-icon" width="29" height="29">
+                     <use href="./images/sprite.svg#icon-credit"></use>
+                  </svg>
+                  <span class="products__item--credit-text">х 24мес</span>
+               </div>
+               <div class="products__item--bottom">
+                  <ul class="products__item--price">
+                     <li class="products__item--price-old active">
+                        <div class="products__item--price-old-cost">16 900</div>
+                        <div class="products__item--price-old-percent">-18 %</div>
+                     </li>
+                     <li class="products__item--price-new">
+                        <div class="products__item--price-new-cost">15 300
+                           <span class="products__item--price-new-currency">грн</span>
+                        </div>
+                     </li>
+                  </ul>
+                  <div class="products__item--bottom-icons">
+                     <a class="products__item--bottom-icons-comparison" href="#">
+                        <svg class="products__item--bottom-icons-comparison-icon" width="30" height="26">
+                           <use href="./images/sprite.svg#icon-comparison"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-favorites" href="#">
+                        <svg class="products__item--bottom-icons-favorites-icon" width="23" height="22">
+                           <use href="./images/sprite.svg#icon-favorites"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-cart" href="#">
+                        <svg class="products__item--bottom-icons-cart-icon" width="22" height="21">
+                           <use href="./images/sprite.svg#icon-cart"></use>
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+            </li>
+            <li class="products__item">
+               <ul class="products__item--labels">
+                  <li class="products__item--label-sale active">Розпродаж</li>
+                  <li class="products__item--label-top active">Топ продаж</li>
+               </ul>
+               <a class="products__item--link" href="http://">
+                  <picture class="products__item--image">
+                     <source type="image/webp" srcset="./images/Product-image.webp">
+                     <source type="image/jpeg" srcset="./images/Product-image.jpg">
+                     <img src="./images/Product-image.jpg" alt="" width="349" height="286">
+                  </picture>
+                  <h3 class="products__item--title">Велосипед Kellys Cliff 30 Black Orange Black Orange M (19˝)</h3>
+               </a>
+               <div class="products__item--credit">
+                  <svg class="products__item--credit-icon" width="29" height="29">
+                     <use href="./images/sprite.svg#icon-credit"></use>
+                  </svg>
+                  <span class="products__item--credit-text">х 24мес</span>
+               </div>
+               <div class="products__item--bottom">
+                  <ul class="products__item--price">
+                     <li class="products__item--price-old active">
+                        <div class="products__item--price-old-cost">16 900</div>
+                        <div class="products__item--price-old-percent">-18 %</div>
+                     </li>
+                     <li class="products__item--price-new">
+                        <div class="products__item--price-new-cost">15 300
+                           <span class="products__item--price-new-currency">грн</span>
+                        </div>
+                     </li>
+                  </ul>
+                  <div class="products__item--bottom-icons">
+                     <a class="products__item--bottom-icons-comparison" href="#">
+                        <svg class="products__item--bottom-icons-comparison-icon" width="30" height="26">
+                           <use href="./images/sprite.svg#icon-comparison"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-favorites" href="#">
+                        <svg class="products__item--bottom-icons-favorites-icon" width="23" height="22">
+                           <use href="./images/sprite.svg#icon-favorites"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-cart" href="#">
+                        <svg class="products__item--bottom-icons-cart-icon" width="22" height="21">
+                           <use href="./images/sprite.svg#icon-cart"></use>
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+            </li>
+         </ul>
+      </section>
+      <section class="products__button" onclick="openSectionSale()">
+         <svg class="products__button--icon" width="32" height="32">
+            <use href="./images/sprite.svg#icon-expand"></use>
+         </svg>
+         <span class="products__button--text">Розгорнути</span>
+      </section>
+      <section class="top-sales container">
+         <h2 class="top-sales__title">Топ продаж</h2>
+         <ul class="products" id="showTopSales">
+            <li class="products__item">
+               <ul class="products__item--labels">
+                  <li class="products__item--label-sale active">Розпродаж</li>
+                  <li class="products__item--label-top active">Топ продаж</li>
+               </ul>
+               <a class="products__item--link" href="http://">
+                  <picture class="products__item--image">
+                     <source type="image/webp" srcset="./images/Product-image.webp">
+                     <source type="image/jpeg" srcset="./images/Product-image.jpg">
+                     <img src="./images/Product-image.jpg" alt="" width="349" height="286">
+                  </picture>
+                  <h3 class="products__item--title">Велосипед Kellys Cliff 30 Black Orange Black Orange M (19˝)</h3>
+               </a>
+               <div class="products__item--credit">
+                  <svg class="products__item--credit-icon" width="29" height="29">
+                     <use href="./images/sprite.svg#icon-credit"></use>
+                  </svg>
+                  <span class="products__item--credit-text">х 24мес</span>
+               </div>
+               <div class="products__item--bottom">
+                  <ul class="products__item--price">
+                     <li class="products__item--price-old active">
+                        <div class="products__item--price-old-cost">16 900</div>
+                        <div class="products__item--price-old-percent">-18 %</div>
+                     </li>
+                     <li class="products__item--price-new">
+                        <div class="products__item--price-new-cost">15 300
+                           <span class="products__item--price-new-currency">грн</span>
+                        </div>
+                     </li>
+                  </ul>
+                  <div class="products__item--bottom-icons">
+                     <a class="products__item--bottom-icons-comparison" href="#">
+                        <svg class="products__item--bottom-icons-comparison-icon" width="30" height="26">
+                           <use href="./images/sprite.svg#icon-comparison"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-favorites" href="#">
+                        <svg class="products__item--bottom-icons-favorites-icon" width="23" height="22">
+                           <use href="./images/sprite.svg#icon-favorites"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-cart" href="#">
+                        <svg class="products__item--bottom-icons-cart-icon" width="22" height="21">
+                           <use href="./images/sprite.svg#icon-cart"></use>
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+            </li>
+            <li class="products__item">
+               <ul class="products__item--labels">
+                  <li class="products__item--label-sale active">Розпродаж</li>
+                  <li class="products__item--label-top active">Топ продаж</li>
+               </ul>
+               <a class="products__item--link" href="http://">
+                  <picture class="products__item--image">
+                     <source type="image/webp" srcset="./images/Product-image.webp">
+                     <source type="image/jpeg" srcset="./images/Product-image.jpg">
+                     <img src="./images/Product-image.jpg" alt="" width="349" height="286">
+                  </picture>
+                  <h3 class="products__item--title">Велосипед Kellys Cliff 30 Black Orange Black Orange M (19˝)</h3>
+               </a>
+               <div class="products__item--credit">
+                  <svg class="products__item--credit-icon" width="29" height="29">
+                     <use href="./images/sprite.svg#icon-credit"></use>
+                  </svg>
+                  <span class="products__item--credit-text">х 24мес</span>
+               </div>
+               <div class="products__item--bottom">
+                  <ul class="products__item--price">
+                     <li class="products__item--price-old active">
+                        <div class="products__item--price-old-cost">16 900</div>
+                        <div class="products__item--price-old-percent">-18 %</div>
+                     </li>
+                     <li class="products__item--price-new">
+                        <div class="products__item--price-new-cost">15 300
+                           <span class="products__item--price-new-currency">грн</span>
+                        </div>
+                     </li>
+                  </ul>
+                  <div class="products__item--bottom-icons">
+                     <a class="products__item--bottom-icons-comparison" href="#">
+                        <svg class="products__item--bottom-icons-comparison-icon" width="30" height="26">
+                           <use href="./images/sprite.svg#icon-comparison"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-favorites" href="#">
+                        <svg class="products__item--bottom-icons-favorites-icon" width="23" height="22">
+                           <use href="./images/sprite.svg#icon-favorites"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-cart" href="#">
+                        <svg class="products__item--bottom-icons-cart-icon" width="22" height="21">
+                           <use href="./images/sprite.svg#icon-cart"></use>
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+            </li>
+            <li class="products__item">
+               <ul class="products__item--labels">
+                  <li class="products__item--label-sale active">Розпродаж</li>
+                  <li class="products__item--label-top active">Топ продаж</li>
+               </ul>
+               <a class="products__item--link" href="http://">
+                  <picture class="products__item--image">
+                     <source type="image/webp" srcset="./images/Product-image.webp">
+                     <source type="image/jpeg" srcset="./images/Product-image.jpg">
+                     <img src="./images/Product-image.jpg" alt="" width="349" height="286">
+                  </picture>
+                  <h3 class="products__item--title">Велосипед Kellys Cliff 30 Black Orange Black Orange M (19˝)</h3>
+               </a>
+               <div class="products__item--credit">
+                  <svg class="products__item--credit-icon" width="29" height="29">
+                     <use href="./images/sprite.svg#icon-credit"></use>
+                  </svg>
+                  <span class="products__item--credit-text">х 24мес</span>
+               </div>
+               <div class="products__item--bottom">
+                  <ul class="products__item--price">
+                     <li class="products__item--price-old active">
+                        <div class="products__item--price-old-cost">16 900</div>
+                        <div class="products__item--price-old-percent">-18 %</div>
+                     </li>
+                     <li class="products__item--price-new">
+                        <div class="products__item--price-new-cost">15 300
+                           <span class="products__item--price-new-currency">грн</span>
+                        </div>
+                     </li>
+                  </ul>
+                  <div class="products__item--bottom-icons">
+                     <a class="products__item--bottom-icons-comparison" href="#">
+                        <svg class="products__item--bottom-icons-comparison-icon" width="30" height="26">
+                           <use href="./images/sprite.svg#icon-comparison"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-favorites" href="#">
+                        <svg class="products__item--bottom-icons-favorites-icon" width="23" height="22">
+                           <use href="./images/sprite.svg#icon-favorites"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-cart" href="#">
+                        <svg class="products__item--bottom-icons-cart-icon" width="22" height="21">
+                           <use href="./images/sprite.svg#icon-cart"></use>
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+            </li>
+            <li class="products__item">
+               <ul class="products__item--labels">
+                  <li class="products__item--label-sale active">Розпродаж</li>
+                  <li class="products__item--label-top active">Топ продаж</li>
+               </ul>
+               <a class="products__item--link" href="http://">
+                  <picture class="products__item--image">
+                     <source type="image/webp" srcset="./images/Product-image.webp">
+                     <source type="image/jpeg" srcset="./images/Product-image.jpg">
+                     <img src="./images/Product-image.jpg" alt="" width="349" height="286">
+                  </picture>
+                  <h3 class="products__item--title">Велосипед Kellys Cliff 30 Black Orange Black Orange M (19˝)</h3>
+               </a>
+               <div class="products__item--credit">
+                  <svg class="products__item--credit-icon" width="29" height="29">
+                     <use href="./images/sprite.svg#icon-credit"></use>
+                  </svg>
+                  <span class="products__item--credit-text">х 24мес</span>
+               </div>
+               <div class="products__item--bottom">
+                  <ul class="products__item--price">
+                     <li class="products__item--price-old active">
+                        <div class="products__item--price-old-cost">16 900</div>
+                        <div class="products__item--price-old-percent">-18 %</div>
+                     </li>
+                     <li class="products__item--price-new">
+                        <div class="products__item--price-new-cost">15 300
+                           <span class="products__item--price-new-currency">грн</span>
+                        </div>
+                     </li>
+                  </ul>
+                  <div class="products__item--bottom-icons">
+                     <a class="products__item--bottom-icons-comparison" href="#">
+                        <svg class="products__item--bottom-icons-comparison-icon" width="30" height="26">
+                           <use href="./images/sprite.svg#icon-comparison"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-favorites" href="#">
+                        <svg class="products__item--bottom-icons-favorites-icon" width="23" height="22">
+                           <use href="./images/sprite.svg#icon-favorites"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-cart" href="#">
+                        <svg class="products__item--bottom-icons-cart-icon" width="22" height="21">
+                           <use href="./images/sprite.svg#icon-cart"></use>
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+            </li>
+            <li class="products__item">
+               <ul class="products__item--labels">
+                  <li class="products__item--label-sale active">Розпродаж</li>
+                  <li class="products__item--label-top active">Топ продаж</li>
+               </ul>
+               <a class="products__item--link" href="http://">
+                  <picture class="products__item--image">
+                     <source type="image/webp" srcset="./images/Product-image.webp">
+                     <source type="image/jpeg" srcset="./images/Product-image.jpg">
+                     <img src="./images/Product-image.jpg" alt="" width="349" height="286">
+                  </picture>
+                  <h3 class="products__item--title">Велосипед Kellys Cliff 30 Black Orange Black Orange M (19˝)</h3>
+               </a>
+               <div class="products__item--credit">
+                  <svg class="products__item--credit-icon" width="29" height="29">
+                     <use href="./images/sprite.svg#icon-credit"></use>
+                  </svg>
+                  <span class="products__item--credit-text">х 24мес</span>
+               </div>
+               <div class="products__item--bottom">
+                  <ul class="products__item--price">
+                     <li class="products__item--price-old active">
+                        <div class="products__item--price-old-cost">16 900</div>
+                        <div class="products__item--price-old-percent">-18 %</div>
+                     </li>
+                     <li class="products__item--price-new">
+                        <div class="products__item--price-new-cost">15 300
+                           <span class="products__item--price-new-currency">грн</span>
+                        </div>
+                     </li>
+                  </ul>
+                  <div class="products__item--bottom-icons">
+                     <a class="products__item--bottom-icons-comparison" href="#">
+                        <svg class="products__item--bottom-icons-comparison-icon" width="30" height="26">
+                           <use href="./images/sprite.svg#icon-comparison"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-favorites" href="#">
+                        <svg class="products__item--bottom-icons-favorites-icon" width="23" height="22">
+                           <use href="./images/sprite.svg#icon-favorites"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-cart" href="#">
+                        <svg class="products__item--bottom-icons-cart-icon" width="22" height="21">
+                           <use href="./images/sprite.svg#icon-cart"></use>
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+            </li>
+            <li class="products__item">
+               <ul class="products__item--labels">
+                  <li class="products__item--label-sale active">Розпродаж</li>
+                  <li class="products__item--label-top active">Топ продаж</li>
+               </ul>
+               <a class="products__item--link" href="http://">
+                  <picture class="products__item--image">
+                     <source type="image/webp" srcset="./images/Product-image.webp">
+                     <source type="image/jpeg" srcset="./images/Product-image.jpg">
+                     <img src="./images/Product-image.jpg" alt="" width="349" height="286">
+                  </picture>
+                  <h3 class="products__item--title">Велосипед Kellys Cliff 30 Black Orange Black Orange M (19˝)</h3>
+               </a>
+               <div class="products__item--credit">
+                  <svg class="products__item--credit-icon" width="29" height="29">
+                     <use href="./images/sprite.svg#icon-credit"></use>
+                  </svg>
+                  <span class="products__item--credit-text">х 24мес</span>
+               </div>
+               <div class="products__item--bottom">
+                  <ul class="products__item--price">
+                     <li class="products__item--price-old active">
+                        <div class="products__item--price-old-cost">16 900</div>
+                        <div class="products__item--price-old-percent">-18 %</div>
+                     </li>
+                     <li class="products__item--price-new">
+                        <div class="products__item--price-new-cost">15 300
+                           <span class="products__item--price-new-currency">грн</span>
+                        </div>
+                     </li>
+                  </ul>
+                  <div class="products__item--bottom-icons">
+                     <a class="products__item--bottom-icons-comparison" href="#">
+                        <svg class="products__item--bottom-icons-comparison-icon" width="30" height="26">
+                           <use href="./images/sprite.svg#icon-comparison"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-favorites" href="#">
+                        <svg class="products__item--bottom-icons-favorites-icon" width="23" height="22">
+                           <use href="./images/sprite.svg#icon-favorites"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-cart" href="#">
+                        <svg class="products__item--bottom-icons-cart-icon" width="22" height="21">
+                           <use href="./images/sprite.svg#icon-cart"></use>
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+            </li>
+            <li class="products__item">
+               <ul class="products__item--labels">
+                  <li class="products__item--label-sale active">Розпродаж</li>
+                  <li class="products__item--label-top active">Топ продаж</li>
+               </ul>
+               <a class="products__item--link" href="http://">
+                  <picture class="products__item--image">
+                     <source type="image/webp" srcset="./images/Product-image.webp">
+                     <source type="image/jpeg" srcset="./images/Product-image.jpg">
+                     <img src="./images/Product-image.jpg" alt="" width="349" height="286">
+                  </picture>
+                  <h3 class="products__item--title">Велосипед Kellys Cliff 30 Black Orange Black Orange M (19˝)</h3>
+               </a>
+               <div class="products__item--credit">
+                  <svg class="products__item--credit-icon" width="29" height="29">
+                     <use href="./images/sprite.svg#icon-credit"></use>
+                  </svg>
+                  <span class="products__item--credit-text">х 24мес</span>
+               </div>
+               <div class="products__item--bottom">
+                  <ul class="products__item--price">
+                     <li class="products__item--price-old active">
+                        <div class="products__item--price-old-cost">16 900</div>
+                        <div class="products__item--price-old-percent">-18 %</div>
+                     </li>
+                     <li class="products__item--price-new">
+                        <div class="products__item--price-new-cost">15 300
+                           <span class="products__item--price-new-currency">грн</span>
+                        </div>
+                     </li>
+                  </ul>
+                  <div class="products__item--bottom-icons">
+                     <a class="products__item--bottom-icons-comparison" href="#">
+                        <svg class="products__item--bottom-icons-comparison-icon" width="30" height="26">
+                           <use href="./images/sprite.svg#icon-comparison"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-favorites" href="#">
+                        <svg class="products__item--bottom-icons-favorites-icon" width="23" height="22">
+                           <use href="./images/sprite.svg#icon-favorites"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-cart" href="#">
+                        <svg class="products__item--bottom-icons-cart-icon" width="22" height="21">
+                           <use href="./images/sprite.svg#icon-cart"></use>
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+            </li>
+            <li class="products__item">
+               <ul class="products__item--labels">
+                  <li class="products__item--label-sale active">Розпродаж</li>
+                  <li class="products__item--label-top active">Топ продаж</li>
+               </ul>
+               <a class="products__item--link" href="http://">
+                  <picture class="products__item--image">
+                     <source type="image/webp" srcset="./images/Product-image.webp">
+                     <source type="image/jpeg" srcset="./images/Product-image.jpg">
+                     <img src="./images/Product-image.jpg" alt="" width="349" height="286">
+                  </picture>
+                  <h3 class="products__item--title">Велосипед Kellys Cliff 30 Black Orange Black Orange M (19˝)</h3>
+               </a>
+               <div class="products__item--credit">
+                  <svg class="products__item--credit-icon" width="29" height="29">
+                     <use href="./images/sprite.svg#icon-credit"></use>
+                  </svg>
+                  <span class="products__item--credit-text">х 24мес</span>
+               </div>
+               <div class="products__item--bottom">
+                  <ul class="products__item--price">
+                     <li class="products__item--price-old active">
+                        <div class="products__item--price-old-cost">16 900</div>
+                        <div class="products__item--price-old-percent">-18 %</div>
+                     </li>
+                     <li class="products__item--price-new">
+                        <div class="products__item--price-new-cost">15 300
+                           <span class="products__item--price-new-currency">грн</span>
+                        </div>
+                     </li>
+                  </ul>
+                  <div class="products__item--bottom-icons">
+                     <a class="products__item--bottom-icons-comparison" href="#">
+                        <svg class="products__item--bottom-icons-comparison-icon" width="30" height="26">
+                           <use href="./images/sprite.svg#icon-comparison"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-favorites" href="#">
+                        <svg class="products__item--bottom-icons-favorites-icon" width="23" height="22">
+                           <use href="./images/sprite.svg#icon-favorites"></use>
+                        </svg>
+                     </a>
+                     <a class="products__item--bottom-icons-cart" href="#">
+                        <svg class="products__item--bottom-icons-cart-icon" width="22" height="21">
+                           <use href="./images/sprite.svg#icon-cart"></use>
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+            </li>
+         </ul>
+      </section>
+      <section class="products__button" onclick="openSectionTopSales()">
+         <svg class="products__button--icon" width="32" height="32">
+            <use href="./images/sprite.svg#icon-expand"></use>
+         </svg>
+         <span class="products__button--text">Розгорнути</span>
+      </section>
+      <section class="news container">
+         <h2 class="news__title">Новини</h2>
+         <ul class="news__list">
+            <li class="news__list--item">
+               <a class="news__list--item-link" href="http://">
+                  <picture class="news__list--item-image">
+                     <source type="image/webp" srcset="./images/news1.webp">
+                     <source type="image/jpeg" srcset="./images/news1.jpg">
+                     <img src="./images/news1.jpg" alt="" width="512" height="245">
+                  </picture>
+                  <h3 class="news__list--item-title">Робота магазину та майстерні на травневі</h3>
+               </a>
+               <div class="news__list--item-description">
+                  Нашим основным преимуществом является лучший ассортимент,
+                  удобены и гибкие доставки и возможности. Также, хотим с радостью вам предложить.
+               </div>
+               <div class="news__list--item-date">20.12.2022</div>
+            </li>
+            <li class="news__list--item">
+               <a class="news__list--item-link" href="http://">
+                  <picture class="news__list--item-image">
+                     <source type="image/webp" srcset="./images/news2.webp">
+                     <source type="image/jpeg" srcset="./images/news2.jpg">
+                     <img src="./images/news2.jpg" alt="" width="512" height="245">
+                  </picture>
+                  <h3 class="news__list--item-title">Робота магазину та майстерні на травневі</h3>
+               </a>
+               <div class="news__list--item-description">
+                  Нашим основным преимуществом является лучший ассортимент,
+                  удобены и гибкие доставки и возможности. Также, хотим с радостью вам предложить.
+               </div>
+               <div class="news__list--item-date">20.12.2022</div>
+            </li>
+            <li class="news__list--item">
+               <a class="news__list--item-link" href="http://">
+                  <picture class="news__list--item-image">
+                     <source type="image/webp" srcset="./images/news3.webp">
+                     <source type="image/jpeg" srcset="./images/news3.jpg">
+                     <img src="./images/news3.jpg" alt="" width="512" height="245">
+                  </picture>
+                  <h3 class="news__list--item-title">Робота магазину та майстерні на травневі</h3>
+               </a>
+               <div class="news__list--item-description">
+                  Нашим основным преимуществом является лучший ассортимент,
+                  удобены и гибкие доставки и возможности. Также, хотим с радостью вам предложить.
+               </div>
+               <div class="news__list--item-date">20.12.2022</div>
+            </li>
+         </ul>
+         <div class="news__button">
+            <a class="news__button--link" href="http://">Всi новини</a>
+         </div>
+      </section>
+      <section class="about container">
+         <h2 class="about__title">СЕО Нашим основным преимуществом является лучший ассортимент</h2>
+         <div class="about__description" id="showAbout">
+            Добро пожаловать в интернет – магазин велооборудования Velosiped.com!
+            Нашим основным преимуществом является лучший ассортимент, удобство покупки онлайн, отличные цены и гибкие
+            возможности доставки. На нашем сайте вы сможете выбрать и купить смартфоны самых популярных брендов,
+            подобрать самый подходящий для себя планшет, познакомиться и приобрести современные модели фототехники и
+            ноутбуков, купить умный телевизор за разумные деньги. И это только малая часть товаров, которые вы
+            сможете найти в один клик в нашем интернет – магазине Алло. Также, хотим с радостью вам предложить
+            посетить раздел Бытовой техники, в котором представлен широкий выбор холодильников, стиральных машин,
+            микроволновых печей, пылесосов и прочей необходимой техники в быту.
+         </div>
+      </section>
+      <section class="about__button container" onclick="openSectionAbout()">
+         <svg class="about__button--icon" width="32" height="32">
+            <use href="./images/sprite.svg#icon-expand"></use>
+         </svg>
+         <span class="about__button--text">Розгорнути</span>
+      </section>
+   </main>
+   <footer class="footer">
+      <div class="footer__top">
+         <div class="footer__left">
+            <div class="footer__left--logo">
+               <svg class="footer__left--logo-icon" width="107" height="54">
+                  <use href="./images/sprite.svg#icon-logo-footer"></use>
+               </svg>
+            </div>
+            <ul class="footer__left--mode">
+               <li class="footer__left--mode-item">График работы:</li>
+               <li class="footer__left--mode-item">Пн-Пт 10:00-20:00,</li>
+               <li class="footer__left--mode-item">Сб 10:00-19:00, Нд 10:00-18:00</li>
+            </ul>
+            <a class="footer__left--location" href="http://">
+               <svg class="footer__left--location-icon" width="13" height="15">
+                  <use href="./images/sprite.svg#icon-location"></use>
+               </svg>
+               <span class="footer__left--location-text">Как добраться?</span>
+            </a>
+            <div class="footer__left--phones">
+               <svg class="footer__left--phones-icon" width="12" height="19">
+                  <use href="./images/sprite.svg#icon-phone"></use>
+               </svg>
+               <ul class="footer__left--phones-list">
+                  <li class="footer__left--phones-list-item">
+                     <a class="footer__left--phones-list-item-link" href="tel:+380442273355">(044) 227–33–55</a>
+                  </li>
+                  <li class="footer__left--phones-list-item">
+                     <a class="footer__left--phones-list-item-link" href="tel:+380956266885">(095) 626–68–85</a>
+                  </li>
+                  <li class="footer__left--phones-list-item">
+                     <a class="footer__left--phones-list-item-link" href="tel:+380967214211">(096) 721–42–11</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <div class="footer__right">
+            <nav class="footer__right--menu">
+               <h3 class="footer__right--menu-title">Страницы:</h3>
+               <ul class="footer__right--menu-list">
+                  <li class="footer__right--menu-list-item">
+                     <a class="footer__right--menu-list-item-link" href="http://">О нас</a>
+                  </li>
+                  <li class="footer__right--menu-list-item">
+                     <a class="footer__right--menu-list-item-link" href="http://">Оплата и доставка</a>
+                  </li>
+                  <li class="footer__right--menu-list-item">
+                     <a class="footer__right--menu-list-item-link" href="http://">Гарантия и возврат</a>
+                  </li>
+                  <li class="footer__right--menu-list-item">
+                     <a class="footer__right--menu-list-item-link" href="http://">Мастерская</a>
+                  </li>
+                  <li class="footer__right--menu-list-item">
+                     <a class="footer__right--menu-list-item-link" href="http://">Контакты</a>
+                  </li>
+                  <li class="footer__right--menu-list-item">
+                     <a class="footer__right--menu-list-item-link" href="http://">Новости</a>
+                  </li>
+               </ul>
+            </nav>
+            <div class="footer__right--pay">
+               <h3 class="footer__right--pay-title">Мы принимаем оплату:</h3>
+               <ul class="footer__right--pay-list">
+                  <li class="footer__right--pay-list-item">
+                     <svg class="footer__right--pay-list-item-icon" width="134" height="28">
+                        <use href="./images/sprite.svg#icon-liqpay"></use>
+                     </svg>
+                  </li>
+                  <li class="footer__right--pay-list-item">
+                     <svg class="footer__right--pay-list-item-icon" width="136" height="24">
+                        <use href="./images/sprite.svg#icon-mastercard"></use>
+                     </svg>
+                  </li>
+                  <li class="footer__right--pay-list-item">
+                     <svg class="footer__right--pay-list-item-icon" width="108" height="35">
+                        <use href="./images/sprite.svg#icon-visa"></use>
+                     </svg>
+                  </li>
+               </ul>
+            </div>
+            <div class="footer__right--social-links">
+               <h3 class="footer__right--social-links-title">Мы в соц. сетях:</h3>
+               <ul class="footer__right--social-links-list">
+                  <li class="footer__right--social-links-list-item">
+                     <a class="footer__right--social-links-list-item-link" href="http://">
+                        <picture class="footer__right--social-links-list-item-icon">
+                           <source type="image/webp" srcset="./images/facebook.webp">
+                           <source type="image/png" srcset="./images/facebook.png">
+                           <img src="./images/facebook.png" alt="" width="29" height="29">
+                        </picture>
+                        <span class="footer__right--social-links-list-item-text">Facebook</span>
+                     </a>
+                  </li>
+                  <li class="footer__right--social-links-list-item">
+                     <a class="footer__right--social-links-list-item-link" href="http://">
+                        <picture class="footer__right--social-links-list-item-icon">
+                           <source type="image/webp" srcset="./images/instagram.webp">
+                           <source type="image/jpeg" srcset="./images/instagram.png">
+                           <img src="./images/instagram.png" alt="" width="29" height="29">
+                        </picture>
+                        <span class="footer__right--social-links-list-item-text">Instagram</span>
+                     </a>
+                  </li>
+                  <li class="footer__right--social-links-list-item">
+                     <a class="footer__right--social-links-list-item-link" href="http://">
+                        <picture class="footer__right--social-links-list-item-icon">
+                           <source type="image/webp" srcset="./images/youtube.webp">
+                           <source type="image/png" srcset="./images/youtube.png">
+                           <img src="./images/youtube.png" alt="" width="31" height="22">
+                        </picture>
+                        <span class="footer__right--social-links-list-item-text">YouTube</span>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <div class="footer__bottom">
+         <span class="footer__bottom--text">Copyright Velosiped.com 2022</span>
+         <img class="footer__bottom--icon" src="./images/icon-up.svg" alt="" width="26px" height="26px">
+      </div>
+   </footer>
+   <script type="text/javascript" src="./js/mobile-menu.js" async></script>
+   <script type="text/javascript" src="./js/show-hide.js" async></script>
+   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+   <script type="text/javascript" src="./js/slider.js" async></script>
+
+</body>
+
+</html>
