@@ -644,7 +644,7 @@ input:checked + .header__mobile-menu--switch-slider::before {
   border-top: 1px solid rgba(126, 126, 126, 0.13);
 }
 
-.header__mobile-menu--list-item > .header__mobile-menu--list-item-link {
+.header__mobile-menu--item > .header__mobile-menu--item-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -658,7 +658,7 @@ input:checked + .header__mobile-menu--switch-slider::before {
   border-top: 1px solid rgba(126, 126, 126, 0.13);
 }
 
-.header__mobile-menu--list-item-icon {
+.header__mobile-menu--item-icon {
   width: 25px;
   height: 18px;
   margin-right: 5px;
