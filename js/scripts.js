@@ -73,18 +73,30 @@ const swiper = new Swiper('.hero__slider', {
 // show-hide
 function openSectionWatched() {
    document.getElementById('showWatched').classList.toggle('open');
+   document.getElementById('showButtonWatched').classList.toggle('close');
+   document.getElementById('hideButtonWatched').classList.toggle('open');
+   document.getElementById('rotateButtonWatched').classList.toggle('open');
 }
 
 function openSectionSale() {
    document.getElementById('showSale').classList.toggle('open');
+   document.getElementById('showButtonSale').classList.toggle('close');
+   document.getElementById('hideButtonSale').classList.toggle('open');
+   document.getElementById('rotateButtonSale').classList.toggle('open');
 }
 
 function openSectionTopSales() {
    document.getElementById('showTopSales').classList.toggle('open');
+   document.getElementById('showButtonTopSales').classList.toggle('close');
+   document.getElementById('hideButtonTopSales').classList.toggle('open');
+   document.getElementById('rotateButtonTopSales').classList.toggle('open');
 }
 
 function openSectionAbout() {
    document.getElementById('showAbout').classList.toggle('open');
+   document.getElementById('showButtonAbout').classList.toggle('close');
+   document.getElementById('hideButtonAbout').classList.toggle('open');
+   document.getElementById('rotateButtonAbout').classList.toggle('open');
 }
 
 // switch
@@ -92,3 +104,32 @@ function clickSwitch() {
    document.getElementById('ru').classList.toggle('active');
    document.getElementById('ua').classList.toggle('no-active');
 }
+
+// back to top
+(function () {
+   'use strict';
+
+   function trackScroll() {
+      var scrolled = window.pageYOffset;
+      var coords = document.documentElement.clientHeight;
+
+      if (scrolled > coords) {
+         goTopBtn.classList.add('back_to_top-show');
+      }
+      if (scrolled < coords) {
+         goTopBtn.classList.remove('back_to_top-show');
+      }
+   }
+
+   function backToTop() {
+      if (window.pageYOffset > 0) {
+         window.scrollBy(0, -80);
+         setTimeout(backToTop, 0);
+      }
+   }
+
+   var goTopBtn = document.querySelector('.back_to_top');
+
+   window.addEventListener('scroll', trackScroll);
+   goTopBtn.addEventListener('click', backToTop);
+})();

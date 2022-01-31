@@ -4,7 +4,7 @@
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
    <meta name="description" content="Головна - velosiped.com">
    <link rel="stylesheet" rel="preload" as="style"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
@@ -377,7 +377,7 @@
             <span class="hero__button--text">Каталог товарів</span>
          </a>
       </section>
-      <!--
+
       <section class="watched container">
          <h2 class="watched__title">Ви дивилися</h2>
          <ul class="products" id="showWatched">
@@ -784,10 +784,11 @@
          </ul>
       </section>
       <section class="products__button" onclick="openSectionWatched()">
-         <svg class="products__button--icon" width="32" height="32">
+         <svg class="products__button--icon" id="rotateButtonWatched" width="32" height="32">
             <use href="./images/sprite.svg#icon-expand"></use>
          </svg>
-         <span class="products__button--text">Розгорнути</span>
+         <span class="products__button--text-show" id="showButtonWatched">Розгорнути</span>
+         <span class="products__button--text-hide" id="hideButtonWatched">Згорнути</span>
       </section>
       <section class="sale container">
          <h2 class="sale__title">Розпродаж</h2>
@@ -1195,12 +1196,12 @@
          </ul>
       </section>
       <section class="products__button" onclick="openSectionSale()">
-         <svg class="products__button--icon" width="32" height="32">
+         <svg class="products__button--icon" id="rotateButtonSale" width="32" height="32">
             <use href="./images/sprite.svg#icon-expand"></use>
          </svg>
-         <span class="products__button--text">Розгорнути</span>
+         <span class="products__button--text-show" id="showButtonSale">Розгорнути</span>
+         <span class="products__button--text-hide" id="hideButtonSale">Згорнути</span>
       </section>
-      -->
       <section class="top-sales container">
          <h2 class="top-sales__title">Топ продаж</h2>
          <ul class="products" id="showTopSales">
@@ -1607,10 +1608,11 @@
          </ul>
       </section>
       <section class="products__button" onclick="openSectionTopSales()">
-         <svg class="products__button--icon" width="32" height="32">
+         <svg class="products__button--icon" id="rotateButtonTopSales" width="32" height="32">
             <use href="./images/sprite.svg#icon-expand"></use>
          </svg>
-         <span class="products__button--text">Розгорнути</span>
+         <span class="products__button--text-show" id="showButtonTopSales">Розгорнути</span>
+         <span class="products__button--text-hide" id="hideButtonTopSales">Згорнути</span>
       </section>
       <section class="news container">
          <h2 class="news__title">Новини</h2>
@@ -1668,21 +1670,27 @@
       <section class="about container">
          <h2 class="about__title">СЕО Нашим основным преимуществом является лучший ассортимент</h2>
          <div class="about__description" id="showAbout">
-            Добро пожаловать в интернет – магазин велооборудования Velosiped.com!
-            Нашим основным преимуществом является лучший ассортимент, удобство покупки онлайн, отличные цены и гибкие
-            возможности доставки. На нашем сайте вы сможете выбрать и купить смартфоны самых популярных брендов,
-            подобрать самый подходящий для себя планшет, познакомиться и приобрести современные модели фототехники и
-            ноутбуков, купить умный телевизор за разумные деньги. И это только малая часть товаров, которые вы
-            сможете найти в один клик в нашем интернет – магазине Алло. Также, хотим с радостью вам предложить
-            посетить раздел Бытовой техники, в котором представлен широкий выбор холодильников, стиральных машин,
-            микроволновых печей, пылесосов и прочей необходимой техники в быту.
+            <p class="about__description--paragraph">
+               Добро пожаловать в интернет – магазин велооборудования <span>Velosiped.com!</span>
+            </p>
+            <p class="about__description--paragraph">
+               Нашим основным преимуществом является лучший ассортимент, удобство <a href="http://">покупки онлайн</a>,
+               отличные цены и гибкие
+               возможности доставки. На нашем сайте вы сможете выбрать и купить смартфоны самых популярных брендов,
+               подобрать самый подходящий для себя планшет, познакомиться и приобрести современные модели фототехники и
+               ноутбуков, купить умный телевизор за разумные деньги. И это только малая часть товаров, которые вы
+               сможете найти в один клик в нашем интернет – магазине Алло. Также, хотим с радостью вам предложить
+               посетить раздел Бытовой техники, в котором представлен широкий выбор холодильников, стиральных машин,
+               микроволновых печей, пылесосов и прочей необходимой техники в быту.
+            </p>
          </div>
       </section>
       <section class="about__button container" onclick="openSectionAbout()">
-         <svg class="about__button--icon" width="32" height="32">
+         <svg class="about__button--icon" id="rotateButtonAbout" width="32" height="32">
             <use href="./images/sprite.svg#icon-expand"></use>
          </svg>
-         <span class="about__button--text">Розгорнути</span>
+         <span class="about__button--text-show" id="showButtonAbout">Розгорнути</span>
+         <span class="about__button--text-hide" id="hideButtonAbout">Згорнути</span>
       </section>
    </main>
    <footer class="footer">
@@ -1774,7 +1782,8 @@
                <h3 class="footer__right--social-links-title">Мы в соц. сетях:</h3>
                <ul class="footer__right--social-links-list">
                   <li class="footer__right--social-links-list-item">
-                     <a class="footer__right--social-links-list-item-link" href="http://" aria-label="facebook">
+                     <a class="footer__right--social-links-list-item-link" href="http://" aria-label="facebook"
+                        target="_blank">
                         <picture class="footer__right--social-links-list-item-icon">
                            <source type="image/webp" srcset="./images/facebook.webp">
                            <source type="image/png" srcset="./images/facebook.png">
@@ -1784,7 +1793,8 @@
                      </a>
                   </li>
                   <li class="footer__right--social-links-list-item">
-                     <a class="footer__right--social-links-list-item-link" href="http://" aria-label="instagram">
+                     <a class="footer__right--social-links-list-item-link" href="http://" aria-label="instagram"
+                        target="_blank">
                         <picture class="footer__right--social-links-list-item-icon">
                            <source type="image/webp" srcset="./images/instagram.webp">
                            <source type="image/jpeg" srcset="./images/instagram.png">
@@ -1794,7 +1804,8 @@
                      </a>
                   </li>
                   <li class="footer__right--social-links-list-item">
-                     <a class="footer__right--social-links-list-item-link" href="http://" aria-label="youtube">
+                     <a class="footer__right--social-links-list-item-link" href="http://" aria-label="youtube"
+                        target="_blank">
                         <picture class="footer__right--social-links-list-item-icon">
                            <source type="image/webp" srcset="./images/youtube.webp">
                            <source type="image/png" srcset="./images/youtube.png">
@@ -1809,7 +1820,9 @@
       </div>
       <div class="footer__bottom">
          <span class="footer__bottom--text">Copyright Velosiped.com 2022</span>
-         <img class="footer__bottom--icon" src="./images/icon-up.svg" alt="" width="26px" height="26px">
+         <a class="back_to_top" title="Наверх">
+            <img class="footer__bottom--icon" src="./images/icon-up.svg" alt="" width="26px" height="26px">
+         </a>
       </div>
    </footer>
    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>

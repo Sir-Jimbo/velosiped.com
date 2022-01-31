@@ -268,6 +268,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      cursor: pointer;
       padding-top: 10px;
       box-shadow: 0px -4px 14px rgba(199, 199, 199, 0.25);
       @media screen and (min-width: 1900px) {
@@ -286,12 +287,29 @@
       }
    }
 
-   &__button--text {
+   &__button--icon.open {
+      transform: rotate(180deg);
+   }
+
+   &__button--text-show,
+   &__button--text-hide {
       font-weight: 300;
       font-size: 12px;
       border-bottom: 1px dashed #424242;
       @media screen and (min-width: 1024px) {
          font-size: 16px;
       }
+   }
+
+   &__button--text-hide {
+      display: none;
+   }
+
+   &__button--text-hide.open {
+      display: block;
+   }
+
+   &__button--text-show.close {
+      display: none;
    }
 }

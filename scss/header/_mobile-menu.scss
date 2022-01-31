@@ -10,20 +10,26 @@
    filter: blur(11px);
    backdrop-filter: blur(11px);
    z-index: 11;
+   @media screen and (min-width: 1024px) {
+      display: none;
+   }
 }
 
 .header__mobile-menu {
-   position: absolute;
+   @media screen and (min-width: 1024px) {
+      display: none;
+   }
+   position: fixed;
    top: 35px;
    left: -265px;
    width: 265px;
-   height: 594px;
+   height: 100%;
    padding-top: 20px;
-   padding-bottom: 20px;
+   padding-bottom: 55px;
    z-index: 999;
    background-color: #21233d;
    transition: all 600ms;
-   overflow-y: scroll;
+   overflow: auto;
 
    &::-webkit-scrollbar {
       width: 4px;

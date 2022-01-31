@@ -17,9 +17,24 @@
       overflow: unset;
    }
 
+   &__description--paragraph span {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 1.8;
+      @media screen and (min-width: 1024px) {
+         font-size: 16px;
+      }
+   }
+
+   &__description--paragraph a {
+      color: #3e8afa;
+      text-decoration: underline;
+   }
+
    &__button {
       display: flex;
       align-items: center;
+      cursor: pointer;
       padding-top: 26px;
       padding-bottom: 40px;
       background: #f5f6ff;
@@ -39,8 +54,24 @@
       margin-right: 10px;
    }
 
-   &__button--text {
+   &__button--icon.open {
+      transform: rotate(180deg);
+   }
+
+   &__button--text-show,
+   &__button--text-hide {
       font-weight: 300;
       border-bottom: 1px dashed #424242;
+   }
+   &__button--text-hide {
+      display: none;
+   }
+
+   &__button--text-hide.open {
+      display: block;
+   }
+
+   &__button--text-show.close {
+      display: none;
    }
 }
