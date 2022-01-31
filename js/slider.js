@@ -16,8 +16,9 @@ const swiper = new Swiper('.hero__slider', {
    //initialSlide: 1,
    watchOverflow: true,
    spaceBetween: 20,
-   centeredSlides: true,
-   loop: true,
+   //centeredSlides: true,
+   //loop: true,
+
    speed: 800,
 
    preloadImages: false,
@@ -35,18 +36,26 @@ const swiper = new Swiper('.hero__slider', {
          centeredSlides: false,
       },
       1024: {
-         slidesPerView: 2,
+         slidesPerView: 1.85,
          centeredSlides: false,
       },
-      1200: {
-         slidesPerView: 2.5,
+
+      1280: {
+         slidesPerView: 2.45,
          centeredSlides: false,
       },
-      1350: {
-         slidesPerView: 3,
+
+      1366: {
+         slidesPerView: 2.7,
          centeredSlides: false,
       },
-      1550: {
+
+      1440: {
+         slidesPerView: 2.85,
+         centeredSlides: false,
+      },
+
+      1900: {
          slidesPerView: 3.5,
          centeredSlides: false,
       },

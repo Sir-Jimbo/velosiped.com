@@ -30,7 +30,7 @@
    }
 
    &__menu--list {
-      margin-bottom: 180px;
+      margin-bottom: 118px;
    }
 
    &__menu--list-item > &__menu--list-item-link {
@@ -93,8 +93,7 @@
 
    &__slider--image img {
       margin: 0 auto;
-      min-height: 100%;
-      width: 100%;
+
       border-radius: 2px;
       @media screen and (min-width: 1024px) {
          margin: 0;
@@ -135,9 +134,7 @@
       @media screen and (min-width: 1630px) {
          display: none;
       }
-   }
 
-   &__button > &__button--link {
       display: inline-flex;
       align-items: center;
       font-size: 14px;

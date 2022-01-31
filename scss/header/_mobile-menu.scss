@@ -43,11 +43,28 @@
       padding-left: 15px;
    }
 
-   &--language-uk,
+   &--language-ua,
    &--language-ru {
       font-size: 12px;
       color: #ffffff;
+   }
+
+   &--language-ua {
+      text-decoration: underline;
+   }
+
+   &--language-ru {
       opacity: 0.4;
+   }
+
+   &--language-ua.no-active {
+      opacity: 0.4;
+      text-decoration: none;
+   }
+
+   &--language-ru.active {
+      text-decoration: underline;
+      opacity: unset;
    }
 
    &--switch {
@@ -115,8 +132,8 @@
       fill: #67a445;
    }
 
-   &--profile > &--profile-link,
-   &--contacts > &--contacts-link {
+   &--profile,
+   &--contacts {
       display: flex;
       align-items: center;
       font-size: 14px;
