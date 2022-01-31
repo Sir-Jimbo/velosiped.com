@@ -147,4 +147,18 @@
    &__button--icon {
       margin-right: 12px;
    }
+
+   &__button--line-left {
+      font-size: 11px;
+      color: #ffffff;
+      transform: rotate(-45deg);
+      margin-right: 3px;
+   }
+
+   &__button--line-right {
+      font-size: 11px;
+      color: #ffffff;
+      transform: rotate(45deg);
+      margin-right: 15px;
+   }
 }

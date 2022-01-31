@@ -975,6 +975,24 @@ input:checked + .header__mobile-menu--switch-slider::before {
   margin-right: 12px;
 }
 
+.hero__button--line-left {
+  font-size: 11px;
+  color: #ffffff;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin-right: 3px;
+}
+
+.hero__button--line-right {
+  font-size: 11px;
+  color: #ffffff;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin-right: 15px;
+}
+
 .products {
   display: -webkit-box;
   display: -ms-flexbox;
