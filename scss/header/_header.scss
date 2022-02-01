@@ -2,7 +2,7 @@
    position: relative;
    display: flex;
    align-items: center;
-   height: 35px;
+   height: 60px;
    padding-left: 15px;
    background-color: #21233d;
 
@@ -16,7 +16,7 @@
    @media screen and (min-width: 1900px) {
       padding-right: 20px;
       padding-left: 172px;
-      justify-content: unset;
+      //justify-content: unset;
    }
 
    &__logo {
@@ -307,9 +307,10 @@
    &__burger {
       display: flex;
       align-items: center;
+      justify-content: center;
       height: 100%;
-      width: 35px;
-      padding: 12px 11px;
+      min-width: 60px;
+      //padding: 12px 11px;
       background-color: #67a445;
       @media screen and (min-width: 1024px) {
          display: none;

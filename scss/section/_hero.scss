@@ -15,6 +15,7 @@
    @media screen and (min-width: 1900px) {
       padding-left: 172px;
    }
+
    &__wrapper {
       position: relative;
       display: flex;
@@ -88,7 +89,7 @@
    }
 
    &__slider .swiper-slide {
-      width: auto;
+      max-width: 380px;
    }
 
    &__slider--image img {

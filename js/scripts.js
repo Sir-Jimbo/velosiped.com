@@ -67,6 +67,14 @@ const swiper = new Swiper('.hero__slider', {
          slidesPerView: 3.5,
          centeredSlides: false,
       },
+      2100: {
+         slidesPerView: 4.2,
+         centeredSlides: false,
+      },
+      2560: {
+         slidesPerView: 5.2,
+         centeredSlides: false,
+      },
    },
 });
 

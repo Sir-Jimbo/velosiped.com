@@ -103,6 +103,10 @@
       }
    }
 
+   &__item--image img {
+      margin: 0 auto;
+   }
+
    &__item--title {
       font-size: 12px;
       font-weight: 400;
