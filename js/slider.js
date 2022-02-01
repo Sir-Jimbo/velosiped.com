@@ -1,11 +1,11 @@
 const swiper = new Swiper('.hero__slider', {
-
-   autoplay: {
-      delay: 1000,
-      stopOnLastSlide: false,
-      disableOnInteraction: false,
-   },
-
+   /*
+      autoplay: {
+         delay: 1000,
+         stopOnLastSlide: false,
+         disableOnInteraction: false,
+      },
+   */
    pagination: {
       el: '.hero__slider--pagination',
       clickable: true,
@@ -19,7 +19,7 @@ const swiper = new Swiper('.hero__slider', {
    //centeredSlides: true,
    //loop: true,
 
-   speed: 800,
+   //speed: 800,
 
    preloadImages: false,
    lazy: {

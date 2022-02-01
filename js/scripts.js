@@ -7,13 +7,13 @@ function openMenu() {
 
 // slider
 const swiper = new Swiper('.hero__slider', {
-
-   autoplay: {
-      delay: 1000,
-      stopOnLastSlide: false,
-      disableOnInteraction: false,
-   },
-
+   /*
+      autoplay: {
+         delay: 1000,
+         stopOnLastSlide: false,
+         disableOnInteraction: false,
+      },
+   */
    pagination: {
       el: '.hero__slider--pagination',
       clickable: true,
